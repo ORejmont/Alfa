@@ -1,0 +1,21 @@
+@use "../variables" as *;
+
+.homepage-group-title {
+  text-align: center;
+  font-size: 32px;
+  color: $color-black;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-top: $large-gap;
+  margin-bottom: $small-gap;
+  font-family: $poppins;
+
+  @media (max-width: 991px) {
+    margin-top: $mobile-gap + 10px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 26px;
+    margin-top: $mobile-gap;
+  }
+}

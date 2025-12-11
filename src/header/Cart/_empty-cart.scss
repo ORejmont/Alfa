@@ -1,0 +1,45 @@
+@use "../variables" as *;
+
+.cart-empty {
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+
+    @media (max-width: 767px) {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.empty-cart-boxes {
+  .col-md-6 {
+    margin-bottom: 30px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 25px;
+    }
+
+    li {
+      padding-left: 0;
+
+      &::before {
+        content: none;
+      }
+
+      a {
+        color: $color-black;
+        text-decoration: underline;
+
+        &:hover {
+          color: $color-primary;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

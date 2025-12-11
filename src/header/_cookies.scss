@@ -1,0 +1,221 @@
+@use "variables" as *;
+
+body {
+  .siteCookies {
+    bottom: 0;
+    color: var(--cookies-notice-color);
+    font-size: 16px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    transition: all .4s;
+    z-index: 100000001;
+  }
+
+  .siteCookies--bottom {
+    @media (min-width: 768px) {
+      left: 50%;
+      margin-left: -335px;
+      width: 670px;
+
+      &.siteCookies--scrolled {
+        background-color: var(--cookies-notice-background);
+        box-shadow: 0 0 30px rgba(27, 25, 57, .5);
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .siteCookies__form {
+    background-color: var(--cookies-notice-background);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 0 30px rgba(27, 25, 57, .5);
+    padding: 20px 15px 25px;
+
+    @media (min-width: 768px) {
+      display: flex;
+      margin: 0 auto;
+      max-width: 670px;
+      padding: 24px;
+    }
+  }
+
+  .siteCookies__content {
+    flex: 1;
+  }
+
+  .siteCookies__text {
+    line-height: 22px;
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      margin-right: 30px;
+    }
+  }
+
+  .siteCookies__text a {
+    text-decoration: underline;
+    text-underline-offset: .14em;
+  }
+
+  .siteCookies__text a,
+  .siteCookies__text p {
+    color: var(--cookies-notice-color);
+  }
+
+  .siteCookies__links {
+    margin-bottom: 16px;
+    text-align: center;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  .siteCookies__link {
+    background: none;
+    border: 2px solid var(--cookies-notice-color);
+    border-radius: 4px;
+    color: var(--cookies-notice-color);
+    display: block;
+    font-weight: 700;
+    line-height: 44px;
+    padding: 0 15px;
+    text-decoration: none;
+    width: 100%;
+
+    @media (hover: hover) {
+      &:hover {
+        background: var(--cookies-notice-link-hover);
+        color: #fff;
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: inline-block;
+      width: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .siteCookies--bottom.siteCookies--scrolled .siteCookies__form {
+      box-shadow: unset;
+    }
+  }
+
+  .siteCookies__buttonWrap {
+    align-items: flex-start;
+    display: flex;
+    gap: 16px;
+  }
+
+  .siteCookies__button {
+    background-color: var(--cookies-notice-color);
+    border: 0;
+    border-radius: 4px;
+    color: var(--cookies-notice-background);
+    display: block;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+
+    @media (min-width: 992px) {
+      transition: all .4s;
+
+      &:hover {
+        background-color: var(--cookies-notice-button-hover);
+      }
+    }
+
+    @media (min-width: 768px) {
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .siteCookies--top {
+      background-color: var(--cookies-notice-background);
+      bottom: auto;
+      top: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .siteCookies--top .siteCookies__form {
+      max-width: 800px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .siteCookies--left {
+      bottom: 30px;
+      left: 30px;
+      right: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .siteCookies--left .siteCookies__form,
+    .siteCookies--right .siteCookies__form {
+      border-radius: 8px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .siteCookies--right {
+      bottom: 30px;
+      left: auto;
+      right: 30px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .siteCookies--center {
+      bottom: auto;
+      left: 50%;
+      right: auto;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .siteCookies--center .siteCookies__form {
+      border-radius: 8px;
+      flex-direction: column;
+      position: relative;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .siteCookies--center .siteCookies__links {
+      bottom: 24px;
+      max-width: 30%;
+      position: absolute;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .siteCookies--center .siteCookies__buttonWrap {
+      align-self: flex-end;
+      max-width: 67%;
+    }
+  }
+}
+
+html.cookies-visible .siteCookies {
+  display: none;
+}

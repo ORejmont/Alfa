@@ -1,0 +1,308 @@
+@use "../variables" as *;
+
+#checkoutContent {
+  .not-possible-info {
+    display: none;
+    font-size: 14px;
+    margin-top: 2px;
+  }
+
+  .inactive .not-possible-info {
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select.form-control,
+  .phone-combined-input,
+  select,
+  textarea {
+    height: 52px;
+    max-width: 400px;
+    width: 100%;
+    padding-left: 17px;
+    border-radius: $border-radius;
+    font-size: 15px;
+  }
+
+  textarea {
+    height: auto;
+    line-height: 1.3;
+    max-width: none;
+    min-height: 150px;
+  }
+
+  #note {
+    margin-bottom: 15px;
+  }
+
+  .phone-combined-input {
+    padding-left: 0;
+  }
+
+  .country-flags {
+    height: 52px;
+  }
+
+  .radio-wrapper {
+    input[type=radio] {
+      display: none;
+
+      &:checked+label {
+        background-color: transparent;
+        // color: #fff;
+        z-index: 1;
+
+        // .payment-shipping-price.for-free {
+        //   color: #fff;
+        // }
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        &::before {
+          content: '';
+          border-style: none;
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          background-color: $color-primary;
+          opacity: .2;
+          filter: brightness(2);
+          z-index: -1;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          transform: none;
+          transition: background-color .3s ease-in-out;
+        }
+
+        &::after {
+          content: '';
+          // border-color: $color-primary;
+          // outline-color: #fff;
+          // background-color: #fff;
+        }
+      }
+
+      +label {
+        padding: 15px;
+        padding-left: 15px + 18px + 10px;
+        width: 100%;
+        display: block;
+        position: relative;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        transition-duration: .3s;
+
+        @media (max-width: 479px) {
+          flex-wrap: wrap;
+        }
+
+        .payment-info {
+          margin-right: auto;
+          flex: 1;
+          max-width: none;
+        }
+
+        .payment-shipping-price {
+          padding-left: 10px;
+          text-align: right;
+          flex: 0 0 110px;
+
+          &.for-free {
+            color: $color-primary;
+          }
+        }
+
+        .payment-logo {
+          padding-left: 10px;
+          text-align: right;
+          order: initial;
+          flex: 0 0 90px;
+
+          @media (max-width: 479px) {
+            flex: initial;
+            width: 100%;
+            order: 1;
+            padding-left: 0;
+            padding-top: 5px;
+            text-align: left;
+          }
+
+          img {
+            max-height: 40px;
+            max-width: 80px;
+            object-fit: contain;
+            object-position: center right;
+          }
+        }
+
+        &:hover {
+          background-color: $color-body-background;
+        }
+
+        &::before {
+          content: '';
+          width: 18px;
+          height: 18px;
+          min-width: 18px;
+          min-height: 18px;
+          border: 0;
+          border-radius: 500px;
+          background: #fff;
+          border: 1px solid #c4cad5;
+          cursor: pointer;
+          display: inline-block;
+          position: absolute;
+          left: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          outline: none;
+          padding: 0;
+          transition: background-color 0s ease-in-out;
+        }
+
+        &::after {
+          position: absolute;
+          left: 15px + 2px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 14px;
+          height: 14px;
+          border-radius: 500px;
+          background-color: $color-black;
+          border: 2px solid #fff;
+          outline: 2px solid $color-black;
+        }
+      }
+    }
+  }
+
+  .order-icon {
+    position: relative;
+    padding-left: 45px;
+    font-weight: 600;
+
+    &::before {
+      content: '\f122';
+      font-family: 'alfa';
+      font-size: 38px;
+      display: inline-block;
+      font-weight: 400;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+
+    &.order-information {
+      padding-left: 40px;
+
+      &::before {
+        content: '\f125';
+        font-size: 32px;
+      }
+    }
+
+    &.order-payment {
+      padding-left: 40px;
+
+      &::before {
+        content: '\f126';
+        font-size: 30px;
+        margin-top: -2px;
+      }
+    }
+  }
+
+  .co-contact-information,
+  .co-billing-address,
+  .co-shipping-address {
+    h4 {
+      position: relative;
+      padding-left: 35px;
+      font-weight: 600;
+
+      &::before {
+        content: '\f12b';
+        font-family: 'alfa';
+        font-size: 28px;
+        display: inline-block;
+        margin-right: 7px;
+        font-weight: 400;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        margin-top: -1px;
+      }
+    }
+  }
+
+  .co-billing-address h4 {
+    padding-left: 38px;
+
+    &::before {
+      content: '\f12c';
+      font-size: 30px;
+    }
+  }
+
+  .co-shipping-address h4 {
+    padding-left: 45px;
+
+    &::before {
+      content: '\f122';
+      font-size: 38px;
+    }
+  }
+
+  .co-box {
+    // margin-bottom: 40px;
+    padding: 20px;
+    padding-bottom: 0;
+
+    @media (max-width: 767px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &.co-payment-method {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Step 2 focus */
+  .co-contact-information,
+  .co-shipping-address {
+    .form-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .form-group:last-of-type {
+    margin-bottom: 10px;
+  }
+
+  .co-box-additional {
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+
+  /* Step 2 focus */
+}
+
+.ordering-process #content label[for="login"]+div {
+  margin-bottom: 10px;
+
+  .btn {
+    border-radius: $border-radius;
+  }
+}

@@ -1,0 +1,66 @@
+@use "../variables" as *;
+
+.ordering-process {
+  padding-bottom: 40px;
+
+  @media (max-width: 767px) {
+    padding-bottom: $page-side-padding-mobile;
+  }
+
+  #content {
+    label {
+      margin-bottom: 3px;
+    }
+  }
+
+  #checkoutSidebar {
+    position: initial !important;
+  }
+}
+
+.cart-row {
+  display: flex;
+  align-items: flex-start;
+
+  @media (max-width: 1199px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  >.col-md-8 {
+    flex: 1;
+
+    @media (max-width: 1199px) {
+      flex: initial;
+      width: 100%;
+    }
+  }
+}
+
+.cart-content {
+  @include background;
+  padding: 15px;
+  border-radius: $border-radius;
+
+  @media (max-width: 767px) {
+    padding: 15px;
+  }
+
+  .co-box {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.co-basic-information {
+  .form-group:last-of-type {
+    margin-bottom: 10px;
+  }
+}
+
+#orderFormSubmit.sr-only {
+  display: none;
+}

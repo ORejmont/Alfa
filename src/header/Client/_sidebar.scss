@@ -1,0 +1,63 @@
+@use "../variables" as *;
+
+.customer-page {
+  #content-wrapper>.content-wrapper-in {
+    @media (max-width: 991px) {
+      flex-direction: column;
+
+      .sidebar {
+        margin-right: 0;
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .sidebar {
+    .client-center-box {
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        li {
+          margin-bottom: 0;
+
+          &.active a {
+            color: $color-primary;
+          }
+
+          &.logout {
+            order: 1;
+
+            a {
+              margin-top: 5px;
+              color: #fff;
+              display: inline-block;
+              font-size: 14px;
+
+              &:hover {
+                background-color: $color-secondary;
+              }
+            }
+          }
+
+          a {
+            width: 100%;
+            display: block;
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+
+            &:hover {
+              background-color: #d9dde7;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
