@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use "../Abstracts" as abs;
 
 .watchdog-row {
   display: flex;
@@ -7,7 +7,7 @@
   margin-bottom: 10px;
 
   .disclaimer {
-    color: $color-grey;
+    color: abs.$color-grey;
     font-style: italic;
     font-size: 15px;
   }
@@ -52,10 +52,10 @@
     width: auto;
 
     &#watchdog-submit {
-      background-color: $color-conversion;
+      background-color: abs.$color-conversion;
 
       &:hover {
-        background-color: $color-conversion-hover;
+        background-color: abs.$color-conversion-hover;
       }
     }
   }

@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .sidebar-in-cart,
 #checkoutSidebar,
@@ -6,9 +6,9 @@
   flex: 0 0 420px;
   margin-left: 15px;
 
-  @include background;
+  @include abs.background;
   padding: 25px;
-  border-radius: $border-radius;
+  border-radius: abs.$border-radius;
 
   @media (max-width: 767px) {
     padding: 15px;
@@ -32,7 +32,7 @@
   .price-wrapper {
     // margin-top: 10px;
     background-color: #f5f6f8;
-    border-radius: $border-radius;
+    border-radius: abs.$border-radius;
     padding: 15px 20px;
     font-size: 16px;
     line-height: 1.2;
@@ -66,7 +66,7 @@
 
     .price-secondary {
       margin-top: 1px;
-      color: $color-grey;
+      color: abs.$color-grey;
       line-height: 1.1;
       font-weight: 400;
       font-size: 15px;
@@ -85,7 +85,7 @@
 
   .recapitulation-single,
   .order-summary-item.helper {
-    color: $color-grey;
+    color: abs.$color-grey;
     font-weight: 400;
 
     strong {
@@ -154,11 +154,11 @@
       }
 
       .main-link {
-        color: $color-black;
+        color: abs.$color-black;
         text-decoration: none;
 
         &:hover {
-          color: $color-primary;
+          color: abs.$color-primary;
           text-decoration: underline;
         }
       }
@@ -176,7 +176,7 @@
 
 .toggle-contacts {
   pointer-events: none;
-  color: $color-black;
+  color: abs.$color-black;
   line-height: 1.1;
   font-weight: 700;
   margin-bottom: 10px;
@@ -212,12 +212,12 @@
       width: 100%;
       padding: 16px 25px;
       font-size: 16px;
-      border-radius: $border-radius;
+      border-radius: abs.$border-radius;
 
       &.next-step-back {
         background-color: transparent;
         border-radius: 0;
-        color: $color-black;
+        color: abs.$color-black;
         font-weight: 400;
         margin-top: 15px;
         font-size: 14px;
@@ -225,7 +225,7 @@
         width: auto;
 
         &:hover {
-          // background-color: $color-body-background;
+          // background-color: abs.$color-body-background;
           text-decoration: underline;
         }
       }

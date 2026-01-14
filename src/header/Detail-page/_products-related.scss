@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .type-detail {
   .browse-p {
@@ -36,7 +36,7 @@
   }
 
   .slick-arrow {
-    @include background;
+    @include abs.background;
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -57,7 +57,7 @@
     }
 
     &:hover {
-      background-color: $color-black;
+      background-color: abs.$color-black;
 
       &::before {
         color: #fff;
@@ -69,7 +69,7 @@
       transition-duration: 0.3s;
       font-size: 14px;
       line-height: 1;
-      color: $color-black;
+      color: abs.$color-black;
       font-family: 'alfa';
     }
 

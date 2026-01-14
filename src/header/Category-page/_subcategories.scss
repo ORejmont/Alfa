@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 @media (min-width: 992px) {
   .sidebar+#content {
@@ -92,8 +92,8 @@
       height: 100%;
       flex-direction: column;
       text-decoration: none;
-      @include background;
-      border-radius: $border-radius;
+      @include abs.background;
+      border-radius: abs.$border-radius;
       border: 2px solid transparent;
       transition-duration: .3s;
 
@@ -101,7 +101,7 @@
         display: flex;
 
         img {
-          border-radius: $border-radius;
+          border-radius: abs.$border-radius;
           width: 120px;
           height: auto;
           aspect-ratio: 7/5;
@@ -119,10 +119,10 @@
       }
 
       &:hover {
-        border-color: $color-primary;
+        border-color: abs.$color-primary;
 
         .text {
-          color: $color-primary;
+          color: abs.$color-primary;
         }
       }
     }

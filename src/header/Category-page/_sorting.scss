@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 @media (min-width: 768px) {
   .scrolled-custom.scrolled-down body:not(.header-hover) #category-header {
@@ -11,7 +11,7 @@
   justify-content: space-between;
   flex-direction: row-reverse;
 
-  background-color: $color-body-background;
+  background-color: abs.$color-body-background;
 
   position: sticky;
   top: 124px;
@@ -20,8 +20,8 @@
   margin-left: -15px;
   z-index: 5;
 
-  margin-top: $small-gap;
-  margin-bottom: $small-gap;
+  margin-top: abs.$small-gap;
+  margin-bottom: abs.$small-gap;
 
   padding: 10px 15px 10px 15px;
 
@@ -30,9 +30,9 @@
 
   @media (max-width: 767px) {
     top: 60px;
-    margin-left: -$page-side-padding-mobile;
-    width: calc(100% + $page-side-padding-mobile * 2);
-    min-width: calc(100% + $page-side-padding-mobile * 2);
+    margin-left: calc(-1 * abs.$page-side-padding-mobile);
+    width: calc(100% + abs.$page-side-padding-mobile * 2);
+    min-width: calc(100% + abs.$page-side-padding-mobile * 2);
   }
 
   @media (max-width: 380px) {
@@ -46,7 +46,7 @@
     align-items: center;
     justify-content: flex-end;
     font-size: 14px;
-    color: $color-black;
+    color: abs.$color-black;
 
     &.listItemsTotal {
       margin-right: auto;
@@ -74,11 +74,11 @@
       display: flex;
       align-items: center;
       text-align: center;
-      background-color: $color-body-background;
+      background-color: abs.$color-body-background;
 
-      font-family: $roboto;
+      font-family: abs.$roboto;
 
-      color: $color-black;
+      color: abs.$color-black;
       text-decoration: none;
 
       padding: 13.5px 20px;
@@ -108,7 +108,7 @@
 
         font-size: 18px;
         font-family: 'alfa';
-        color: $color-black;
+        color: abs.$color-black;
 
         transition-duration: .3s;
       }
@@ -169,17 +169,17 @@
       }
 
       li:first-of-type button {
-        border-top-left-radius: $border-radius;
-        border-top-right-radius: $border-radius;
+        border-top-left-radius: abs.$border-radius;
+        border-top-right-radius: abs.$border-radius;
       }
 
       li:last-of-type button {
-        border-bottom-left-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
+        border-bottom-left-radius: abs.$border-radius;
+        border-bottom-right-radius: abs.$border-radius;
       }
 
       // .order-placeholder {
-      //   border-radius: $border-radius $border-radius 0 0;
+      //   border-radius: abs.$border-radius abs.$border-radius 0 0;
       //   background-color: #d9dde7;
       //   border-color: #d9dde7;
       //   border-bottom-color: #c0c7cf;
@@ -217,7 +217,7 @@
       text-align: center;
       width: 100%;
       cursor: pointer;
-      background-color: $color-body-background;
+      background-color: abs.$color-body-background;
 
       padding: 15px 20px;
       font-weight: 400;
@@ -236,7 +236,7 @@
           margin-left: 7px;
 
           font-family: 'alfa';
-          color: $color-black;
+          color: abs.$color-black;
           font-size: 11px;
 
           transition-duration: .3s;
@@ -251,7 +251,7 @@
 
     // .order-placeholder {
     //   z-index: 1;
-    //   color: $color-black;
+    //   color: abs.$color-black;
     //   border-top: 1px solid rgb(220, 220, 220);
     //   border-radius: calc(47px / 2);
     //   transition: background-color 0.3s ease, border-radius 0.3s ease;
@@ -270,7 +270,7 @@
     //     margin-left: 7px;
 
     //     font-family: 'alfa';
-    //     color: $color-black;
+    //     color: abs.$color-black;
     //     font-size: 11px;
 
     //     transition-duration: .3s;
@@ -285,8 +285,8 @@
     //   }
 
     //   &.last {
-    //     border-bottom-left-radius: $border-radius;
-    //     border-bottom-right-radius: $border-radius;
+    //     border-bottom-left-radius: abs.$border-radius;
+    //     border-bottom-right-radius: abs.$border-radius;
     //   }
     // }
   }

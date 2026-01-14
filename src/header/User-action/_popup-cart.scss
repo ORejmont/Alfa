@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 body::after {
   content: '';
@@ -39,7 +39,7 @@ body::after {
   top: 0;
   height: 100%;
   width: 500px;
-  @include background;
+  @include abs.background;
   overflow-y: auto;
 
   transform: translateX(100%);
@@ -56,7 +56,7 @@ body::after {
     align-items: center;
     justify-content: space-between;
     padding: 20px 35px 15px 35px;
-    border-bottom: 1px solid $color-nav-element-background-hover;
+    border-bottom: 1px solid abs.$color-nav-element-background-hover;
     background-color: #fff;
     position: sticky;
     top: 0;
@@ -69,7 +69,7 @@ body::after {
 
     h4 {
       margin: 0;
-      font-family: $poppins;
+      font-family: abs.$poppins;
       font-weight: 600;
       font-size: 22px;
       line-height: 1.1;
@@ -83,7 +83,7 @@ body::after {
         content: "\f107";
         font-size: 27px;
         font-family: "alfa";
-        color: $color-black;
+        color: abs.$color-black;
         font-weight: 400;
         transition: color .3s ease-in-out;
       }
@@ -117,7 +117,7 @@ body::after {
         position: absolute;
         display: block;
         border: 6px solid transparent;
-        border-top: 6px solid $color-black;
+        border-top: 6px solid abs.$color-black;
         border-right: 6px solid transparent;
         box-sizing: border-box;
         animation: rotation 1s linear infinite;
@@ -135,7 +135,7 @@ body::after {
         top: 50%;
         border-radius: 50%;
         border: 6px solid transparent;
-        border-bottom: 6px solid $color-black;
+        border-bottom: 6px solid abs.$color-black;
         border-left: 6px solid transparent;
         animation: rotation 1s linear infinite;
         z-index: 1;
@@ -207,11 +207,11 @@ body::after {
         margin-left: 35px;
         margin-right: 35px;
 
-        border-radius: $border-radius;
+        border-radius: abs.$border-radius;
 
         // transition: background-color .3s ease-in-out;
 
-        border: 2px solid $color-nav-element-background;
+        border: 2px solid abs.$color-nav-element-background;
 
         @media (max-width: 479px) {
           margin-left: 15px;
@@ -219,7 +219,7 @@ body::after {
         }
 
         // &:hover {
-        //   background-color: $color-nav-element-background;
+        //   background-color: abs.$color-nav-element-background;
         // }
 
         &:last-of-type {
@@ -274,7 +274,7 @@ body::after {
           }
 
           a[data-testid="cartWidgetProductName"] {
-            color: $color-black;
+            color: abs.$color-black;
             font-weight: 400;
             font-size: 16px;
             text-decoration: none;
@@ -337,7 +337,7 @@ body::after {
               width: 12px;
               height: 1px;
               border-radius: 1px;
-              background-color: $color-black;
+              background-color: abs.$color-black;
               transition: background-color .3s ease-in-out;
               top: 50%;
               left: 50%;
@@ -364,8 +364,8 @@ body::after {
   .cart-window-total {
     margin: 10px 35px 0 35px;
     text-align: center;
-    background-color: $color-nav-element-background;
-    border-radius: $border-radius;
+    background-color: abs.$color-nav-element-background;
+    border-radius: abs.$border-radius;
     padding: 16px 25px;
     font-size: 16px;
     line-height: 1.2;
@@ -389,33 +389,33 @@ body::after {
     }
 
     >a.btn {
-      background-color: $color-conversion;
+      background-color: abs.$color-conversion;
       width: 100%;
       padding: 16px 25px;
       font-size: 16px;
-      border-radius: $border-radius;
+      border-radius: abs.$border-radius;
 
       &:hover {
-        background-color: $color-conversion-hover;
+        background-color: abs.$color-conversion-hover;
       }
     }
 
     .cart-continue-shopping {
-      background-color: $color-black;
+      background-color: abs.$color-black;
       width: 100%;
       padding: 14px 25px;
       font-size: 16px;
-      border-radius: $border-radius;
+      border-radius: abs.$border-radius;
       color: #fff;
       border: 0;
       box-shadow: none;
-      font-family: $poppins;
+      font-family: abs.$poppins;
       transition-duration: 0.3s;
       text-align: center;
       font-weight: 600;
       line-height: 1.2;
       cursor: pointer;
-      border: 2px solid $color-black;
+      border: 2px solid abs.$color-black;
       position: relative;
       z-index: 1;
       overflow: hidden;
@@ -432,8 +432,8 @@ body::after {
           position: absolute;
           left: 0;
           top: 0;
-          background-color: $color-primary;
-          border-radius: $border-radius - 2px;
+          background-color: abs.$color-primary;
+          border-radius: abs.$border-radius - 2px;
           z-index: -1;
           transition-duration: 0.3s;
           transition-timing-function: ease-out;
@@ -458,7 +458,7 @@ body::after {
     font-size: 22px;
     font-weight: 600;
     line-height: 1.1;
-    color: $color-black;
+    color: abs.$color-black;
   }
 
   .cart-suggested-categories {
@@ -470,7 +470,7 @@ body::after {
     }
 
     >span {
-      color: $color-grey;
+      color: abs.$color-grey;
       font-size: 17px;
       line-height: 1.2;
       text-align: center;
@@ -494,8 +494,8 @@ body::after {
         text-decoration: none;
 
         margin: 5px;
-        border: 2px solid $color-nav-element-background;
-        border-radius: $border-radius;
+        border: 2px solid abs.$color-nav-element-background;
+        border-radius: abs.$border-radius;
 
         padding: 10px;
 
@@ -508,7 +508,7 @@ body::after {
         }
 
         img {
-          border-radius: $border-radius;
+          border-radius: abs.$border-radius;
           margin-bottom: 5px;
           width: 100%;
 
@@ -521,8 +521,8 @@ body::after {
           p {
             &::after {
               color: #fff;
-              background-color: $color-black;
-              border-color: $color-black;
+              background-color: abs.$color-black;
+              border-color: abs.$color-black;
             }
           }
         }
@@ -531,7 +531,7 @@ body::after {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          color: $color-black;
+          color: abs.$color-black;
           font-size: 16px;
           font-weight: 500;
           width: 100%;
@@ -543,7 +543,7 @@ body::after {
             justify-content: center;
             font-family: 'alfa';
             font-size: 11px;
-            color: $color-black;
+            color: abs.$color-black;
             transform: rotate(-90deg);
             background-color: #fff;
             width: 35px;
@@ -551,7 +551,7 @@ body::after {
             flex: 0 0 35px;
             padding-top: 3px;
             border-radius: 50px;
-            border: 1px solid $color-nav-element-background-hover;
+            border: 1px solid abs.$color-nav-element-background-hover;
             margin-left: 10px;
 
             transition-duration: .3s;

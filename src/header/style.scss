@@ -1,107 +1,28 @@
-@use "variables" as *;
-// @use "root" as *;
-// @use "Fonts/fonts" as *;
-// @use "Fonts/icons" as *;
-// @use "main" as *;
-// @use "page-width" as *;
-// @use "messages" as *;
-// @use "Header/admin-bar" as *;
-// @use "Header/site-msg" as *;
-// @use "Header/top-navigation-bar" as *;
-// @use "Header/header" as *;
-// @use "Header/languagesMenu" as *;
-// @use "User-action/user-action" as *;
-// @use "User-action/popup-login" as *;
-// @use "User-action/popup-cart" as *;
-// @use "search" as *;
-
-// @use "Content-hp/carousel" as *;
-// @use "Content-hp/top-banners" as *;
-// @use "Content-hp/top-categories" as *;
-// @use "Content-hp/benefit-banners" as *;
-// @use "Content-hp/products-title" as *;
-// @use "Content-hp/products" as *;
-// @use "Content-hp/middle-banners" as *;
-// @use "Content-hp/welcome-wrapper" as *;
-// @use "Content-hp/latest-contribution-wrapper" as *;
-// @use "Content-hp/footer-banners" as *;
-
-// @use "Category-page/title-and-perex" as *;
-// @use "Category-page/breadcrumbs" as *;
-// @use "Category-page/subcategories" as *;
-// @use "Category-page/nejprodavanejsi" as *;
-// @use "Category-page/sorting" as *;
-// @use "Category-page/filter" as *;
-// @use "Category-page/sidebar" as *;
-// @use "Category-page/paginator" as *;
-// @use "Category-page/empty-category" as *;
-// @use "Category-page/category-banner" as *;
-
-// @use "Detail-page/product-top" as *;
-// @use "Detail-page/quantity-discount" as *;
-// @use "Detail-page/products-related" as *;
-// @use "Detail-page/shp-tabs" as *;
-// @use "Detail-page/free-gift" as *;
-
-// @use "News/news" as *;
-// @use "News/news-inside" as *;
-
-// @use "text-1-4" as *;
-// @use "type-manufacturers-listing" as *;
-
-// @use "footer" as *;
-// @use "Sidebar-footer/main" as *;
-
-// @use "footer-bottom-risky" as *;
-
-// @use "Rating/page" as *;
-
-// @use "Registration/registration" as *;
-// @use "Registration/login" as *;
-// @use "Registration/forgotten-password" as *;
-// @use "Registration/contact-form" as *;
-
-// @use "Client/main" as *;
-// @use "Client/sidebar" as *;
-// @use "Client/settings" as *;
-// @use "Client/shipping-address" as *;
-// @use "Client/table" as *;
-
-// @use "Cart/main" as *;
-// @use "Cart/navigation" as *;
-// @use "Cart/sidebar" as *;
-// @use "Cart/cart-table" as *;
-// @use "Cart/extras" as *;
-// @use "Cart/checkout-content" as *;
-// @use "Cart/in-thank-you" as *;
-// @use "Cart/empty-cart" as *;
-// @use "Cart/free-gift" as *;
-
-// @use "watchdog" as *;
-// @use "advanced-order" as *;
-
-// @use "type-page" as *;
-
-// /* Ostatní soubory */
-
-// @use "cookies" as *;
-
-// /* Mobil */
-// @use "Header/navigation-mobile" as *;
-// @use "Header/menu-mobile" as *;
-// /* Mobil */
-
-// @use "Addons/poznamka-a-priloha-k-produktu" as *;
-// @use "Addons/oblibene-produkty_a_porovnavac" as *;
-// @use "Addons/naposledy-navstivene-produkty" as *;
+@use "Abstracts" as abs;
+@use 'Main';
+@use 'Fonts';
+@use 'User-action';
+@use 'Header';
+@use 'Content-hp';
+@use 'Category-page';
+@use 'Detail-page';
+@use 'News';
+@use 'Footer';
+@use 'Rating';
+@use 'Registration';
+@use 'Client';
+@use 'Cart';
+@use 'Others';
+@use 'Type-page';
+@use 'Addons';
 
 .custom-style-panel {
   position: fixed;
   right: 20px;
   bottom: 20px;
   padding: 20px;
-  border-radius: $border-radius;
-  @include background;
+  border-radius: abs.$border-radius;
+  @include abs.background;
   z-index: 999;
 
   display: flex;

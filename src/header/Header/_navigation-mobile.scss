@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 @media (max-width: 767px) {
   body {
@@ -28,17 +28,17 @@
 
       display: flex;
 
-      padding: 0 $page-side-padding-mobile;
+      padding: 0 abs.$page-side-padding-mobile;
       position: absolute;
       bottom: 0;
-      left: -$page-side-padding-mobile;
-      width: calc(100% + $page-side-padding-mobile * 2);
+      left: calc(-1 * abs.$page-side-padding-mobile);
+      width: calc(100% + abs.$page-side-padding-mobile * 2);
       height: 78px;
       align-items: center;
       justify-content: center;
       background-color: #fff;
       transform: translateY(100%);
-      border-top: 1px solid $color-nav-element-background;
+      border-top: 1px solid abs.$color-nav-element-background;
 
       form {
         width: 100%;
@@ -46,7 +46,7 @@
     }
 
     &.type-detail #header+.breadcrumbs-wrapper {
-      padding-top: 60px + $page-side-padding-mobile;
+      padding-top: 60px + abs.$page-side-padding-mobile;
     }
 
     #header {
@@ -55,7 +55,7 @@
       margin-bottom: -60px;
 
       +#content-wrapper {
-        padding-top: calc($page-side-padding-mobile + 60px);
+        padding-top: calc(abs.$page-side-padding-mobile + 60px);
       }
 
       +.breadcrumbs-wrapper {
@@ -137,19 +137,19 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            background-color: $color-nav-element-background;
+            background-color: abs.$color-nav-element-background;
 
             transition-duration: .3s;
 
             &:hover {
-              background-color: $color-nav-element-background-hover;
+              background-color: abs.$color-nav-element-background-hover;
             }
 
             &::before {
               content: '\f111';
               font-family: "alfa";
               font-size: 18px;
-              color: $color-black;
+              color: abs.$color-black;
               font-weight: 400;
             }
           }
@@ -165,19 +165,19 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            background-color: $color-nav-element-background;
+            background-color: abs.$color-nav-element-background;
 
             transition-duration: .3s;
 
             &:hover {
-              background-color: $color-nav-element-background-hover;
+              background-color: abs.$color-nav-element-background-hover;
             }
 
             &::before {
               content: '\f10c';
               font-family: 'alfa';
               font-size: 18px;
-              color: $color-black;
+              color: abs.$color-black;
               display: flex;
               align-items: center;
               justify-content: flex-end;
@@ -236,7 +236,7 @@
     top: auto;
     bottom: -40px - 10px;
 
-    background-color: $color-nav-element-background;
+    background-color: abs.$color-nav-element-background;
 
     display: flex;
     align-items: center;
@@ -249,13 +249,13 @@
     &::before {
       content: '\f114';
       font-family: 'alfa';
-      color: $color-black;
+      color: abs.$color-black;
       font-weight: 400;
       font-size: 18px;
     }
 
     &:hover {
-      background-color: $color-nav-element-background-hover;
+      background-color: abs.$color-nav-element-background-hover;
     }
   }
 

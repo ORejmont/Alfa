@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .row.banners-row:not(.loaded-state) {
   min-height: 200px;
@@ -43,7 +43,7 @@
 .carousel-inner {
   position: relative;
   overflow: hidden;
-  border-radius: $border-radius;
+  border-radius: abs.$border-radius;
 
   min-height: auto !important;
 
@@ -101,7 +101,7 @@
 
       &.has-background {
         background-color: #fff;
-        border-radius: $border-radius;
+        border-radius: abs.$border-radius;
         bottom: 0;
 
         max-width: calc(70% - 24px);
@@ -132,13 +132,13 @@
 
         .extended-banner-title,
         .extended-banner-text {
-          color: $color-black;
+          color: abs.$color-black;
         }
 
         .extended-banner-link {
           color: #fff;
-          background-color: $color-black;
-          border-color: $color-black;
+          background-color: abs.$color-black;
+          border-color: abs.$color-black;
         }
       }
 
@@ -150,19 +150,19 @@
         }
 
         .extended-banner-link {
-          color: $color-black;
+          color: abs.$color-black;
           background-color: #fff;
           border-color: #fff;
         }
       }
 
       .extended-banner-title {
-        color: $color-black;
+        color: abs.$color-black;
         font-size: clamp(18px, 1.5vw, 22px);
         font-size: clamp(18px, 2.5cqw, 22px);
         font-weight: 600;
         line-height: 1.1;
-        font-family: $poppins;
+        font-family: abs.$poppins;
 
         hyphens: manual;
         width: 100%;
@@ -186,12 +186,12 @@
       }
 
       .extended-banner-text {
-        color: $color-black;
+        color: abs.$color-black;
         font-size: clamp(32px, 3.2vw, 42px);
         font-size: clamp(32px, 4cqw, 42px);
         font-weight: 600;
         line-height: 1.1;
-        font-family: $poppins;
+        font-family: abs.$poppins;
 
         hyphens: manual;
         width: 100%;
@@ -211,13 +211,13 @@
       }
 
       .extended-banner-link {
-        background-color: $color-black;
+        background-color: abs.$color-black;
         padding: 12px 25px;
         font-weight: 500;
         font-size: 18px;
         color: #fff;
         border-radius: 150px;
-        font-family: $poppins;
+        font-family: abs.$poppins;
 
         pointer-events: all;
 
@@ -225,7 +225,7 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
-        border: 2px solid $color-black;
+        border: 2px solid abs.$color-black;
 
         @media (max-width: 991px) {
           padding: 10px 20px;
@@ -239,7 +239,7 @@
           position: absolute;
           left: 0;
           top: 0;
-          background-color: $color-primary;
+          background-color: abs.$color-primary;
           border-radius: 150px;
           z-index: -1;
           transition-duration: .3s;
@@ -364,10 +364,10 @@
 
 #carousel {
   position: relative;
-  margin-bottom: $small-gap;
+  margin-bottom: abs.$small-gap;
 
   @media (max-width: 767px) {
-    margin-bottom: $small-gap-12;
+    margin-bottom: abs.$small-gap-12;
   }
 
   .carousel-control {
@@ -405,12 +405,12 @@
       display: block;
       transition-duration: .3s;
       font-size: 14px;
-      color: $color-black;
+      color: abs.$color-black;
       font-family: 'alfa';
     }
 
     &:hover {
-      background-color: $color-black;
+      background-color: abs.$color-black;
 
       &::before {
         color: #fff;
@@ -497,11 +497,11 @@
       }
 
       &:hover {
-        background-color: $color-secondary;
+        background-color: abs.$color-secondary;
       }
 
       &.active {
-        background-color: $color-primary;
+        background-color: abs.$color-primary;
       }
     }
   }

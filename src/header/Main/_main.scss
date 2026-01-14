@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "../Abstracts" as abs;
 
 *,
 *::before,
@@ -15,16 +15,16 @@
 
 *::before,
 *::after {
-  font-family: $roboto;
+  font-family: abs.$roboto;
 }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  font-family: $roboto;
-  color: $color-black;
+  font-family: abs.$roboto;
+  color: abs.$color-black;
   font-size: 16px;
   line-height: 1.1;
-  background-color: $color-body-background; // #f3f6fa #f3f5f8
+  background-color: abs.$color-body-background; // #f3f6fa #f3f5f8
 }
 
 #content {
@@ -123,7 +123,7 @@ ul li {
     width: 4px;
     height: 4px;
     border-radius: 5px;
-    background-color: $color-black;
+    background-color: abs.$color-black;
   }
 
   &:last-of-type {
@@ -178,10 +178,10 @@ select {
 a {
   transition: all .3s ease-out;
 
-  color: $color-primary;
+  color: abs.$color-primary;
 
   &:hover {
-    color: $color-secondary;
+    color: abs.$color-secondary;
     text-decoration: none;
   }
 }
@@ -225,7 +225,7 @@ h4,
 h5,
 h6 {
   font-size: 32px;
-  color: $color-black;
+  color: abs.$color-black;
   line-height: 1.1;
   font-weight: 700;
 
@@ -307,23 +307,23 @@ h6 {
   padding: 14px 25px;
   text-align: center;
 
-  background-color: $color-primary;
+  background-color: abs.$color-primary;
   color: #fff;
-  font-family: $poppins;
+  font-family: abs.$poppins;
 
   transition-duration: .3s;
 
   &:hover {
-    background-color: $color-secondary;
+    background-color: abs.$color-secondary;
   }
 
   &.btn-cart,
   &.add-to-cart-button,
   &.btn-conversion {
-    background-color: $color-conversion;
+    background-color: abs.$color-conversion;
 
     &:hover {
-      background-color: $color-conversion-hover;
+      background-color: abs.$color-conversion-hover;
     }
   }
 }
@@ -362,8 +362,8 @@ input[type="radio"] {
   margin-top: -1px;
 
   &:checked {
-    // background-color: $color-primary;
-    // border-color: $color-primary;
+    // background-color: abs.$color-primary;
+    // border-color: abs.$color-primary;
 
     &::after {
       content: "";
@@ -374,9 +374,9 @@ input[type="radio"] {
       left: 50%;
       border-radius: 4px - 2px;
       transform: translate(-50%, -50%);
-      background-color: $color-black;
+      background-color: abs.$color-black;
       border: 2px solid #fff;
-      outline: 2px solid $color-black;
+      outline: 2px solid abs.$color-black;
     }
   }
 
@@ -422,7 +422,7 @@ input[type="radio"] {
   width: 18px;
   height: 18px;
   border-radius: 9px;
-  background-color: $color-primary;
+  background-color: abs.$color-primary;
   color: #fff;
   font-size: 15px;
   line-height: 18px;
@@ -435,7 +435,7 @@ input[type="radio"] {
 }
 
 label.disabled {
-  color: $color-grey;
+  color: abs.$color-grey;
   cursor: not-allowed !important;
 }
 
@@ -459,7 +459,7 @@ input {
   padding: 10px 10px;
   background-color: #fff;
 
-  color: $color-black;
+  color: abs.$color-black;
   font-size: 14px;
   font-weight: 400;
 
@@ -470,7 +470,7 @@ input {
   }
 
   &::placeholder {
-    color: rgba($color: $color-black, $alpha: .5);
+    color: rgba($color: abs.$color-black, $alpha: .5);
   }
 }
 
@@ -479,7 +479,7 @@ textarea {
   border: 1px solid #c4cad5;
   border-radius: 4px;
 
-  color: $color-black;
+  color: abs.$color-black;
   font-size: 14px;
   font-weight: 400;
   padding: 10px;
@@ -487,7 +487,7 @@ textarea {
   resize: vertical;
 
   &::placeholder {
-    color: rgba($color: $color-black, $alpha: .5);
+    color: rgba($color: abs.$color-black, $alpha: .5);
   }
 }
 
@@ -533,7 +533,7 @@ textarea {
     }
 
     &:hover {
-      background-color: $color-primary;
+      background-color: abs.$color-primary;
 
       &::before,
       &::after {
@@ -552,7 +552,7 @@ textarea {
       width: 7px;
       height: 2px;
       border-radius: 2px;
-      background-color: $color-black;
+      background-color: abs.$color-black;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -576,7 +576,7 @@ textarea {
       width: 7px;
       height: 2px;
       border-radius: 2px;
-      background-color: $color-black;
+      background-color: abs.$color-black;
 
       transition: background-color .3s ease-in-out;
     }
@@ -585,7 +585,7 @@ textarea {
   input {
     border-radius: 19px;
     background-color: #fff;
-    border-color: $color-nav-element-background-hover;
+    border-color: abs.$color-nav-element-background-hover;
     text-align: center;
     font-size: 16px;
     padding: 9px 34px;
@@ -616,7 +616,7 @@ textarea {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: $border-radius;
+  border-radius: abs.$border-radius;
 }
 
 sub,

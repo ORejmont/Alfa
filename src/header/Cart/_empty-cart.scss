@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .cart-empty {
   h1 {
@@ -28,11 +28,11 @@
       }
 
       a {
-        color: $color-black;
+        color: abs.$color-black;
         text-decoration: underline;
 
         &:hover {
-          color: $color-primary;
+          color: abs.$color-primary;
           text-decoration: none;
         }
       }

@@ -1,15 +1,15 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .benefitBanner {
   display: flex;
-  border-radius: $border-radius;
+  border-radius: abs.$border-radius;
   border: 2px solid transparent;
   justify-content: center;
   flex-wrap: wrap;
 
-  @include background;
+  @include abs.background;
 
-  margin-bottom: $small-gap;
+  margin-bottom: abs.$small-gap;
 
   padding: 7.5px 0;
 
@@ -35,7 +35,7 @@
           top: 0;
           transform: translateX(-50%);
           width: 40px;
-          background-color: $border-color;
+          background-color: abs.$border-color;
           height: 2px;
         }
       }
@@ -52,7 +52,7 @@
           top: 50%;
           transform: translate(-50%, -50%);
           width: 2px;
-          background-color: $border-color;
+          background-color: abs.$border-color;
           height: 40px;
         }
       }
@@ -151,7 +151,7 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 1.1;
-        color: $color-black;
+        color: abs.$color-black;
 
         +.benefitBanner__data {
           margin-top: 4px;
@@ -159,7 +159,7 @@
       }
 
       .benefitBanner__data {
-        color: $color-grey;
+        color: abs.$color-grey;
         font-size: 15px;
         font-weight: 400;
         line-height: 1.1;
@@ -179,15 +179,15 @@
 
 .type-category {
   .benefitBanner {
-    margin-bottom: $large-gap;
+    margin-bottom: abs.$large-gap;
     margin-top: 30px;
 
     @media (max-width: 991px) {
-      margin-bottom: $mobile-gap + 10px;
+      margin-bottom: abs.$mobile-gap + 10px;
     }
 
     @media (max-width: 767px) {
-      margin-bottom: $mobile-gap;
+      margin-bottom: abs.$mobile-gap;
     }
   }
 }

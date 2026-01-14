@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 $rate-space: 50px;
 
@@ -52,7 +52,7 @@ $rate-space: 50px;
     line-height: 1.2;
     padding: 14px 25px;
     text-align: center;
-    background-color: $color-primary;
+    background-color: abs.$color-primary;
     color: #fff;
     font-family: "Poppins", sans-serif;
     transition-duration: 0.3s;
@@ -61,7 +61,7 @@ $rate-space: 50px;
     display: none;
 
     &:hover {
-      background-color: $color-secondary;
+      background-color: abs.$color-secondary;
     }
   }
 
@@ -70,9 +70,9 @@ $rate-space: 50px;
   }
 
   #rate-form {
-    @include background;
+    @include abs.background;
     padding: 20px;
-    border-radius: $border-radius;
+    border-radius: abs.$border-radius;
     flex: 1;
     margin-left: 12px;
 
@@ -120,9 +120,9 @@ $rate-space: 50px;
     align-items: stretch;
     flex: 0 1 350px;
 
-    @include background;
+    @include abs.background;
     padding: 20px;
-    border-radius: $border-radius;
+    border-radius: abs.$border-radius;
 
     @media (max-width: 991px) {
       flex: 1;
@@ -142,7 +142,7 @@ $rate-space: 50px;
 
       // &::after {
       //   content: '/5';
-      //   color: $color-grey;
+      //   color: abs.$color-grey;
       // }
     }
 
@@ -154,7 +154,7 @@ $rate-space: 50px;
         display: block;
         font-size: 15px;
         line-height: 1.1;
-        color: $color-grey;
+        color: abs.$color-grey;
         font-weight: 500;
       }
     }
@@ -181,7 +181,7 @@ $rate-space: 50px;
         .rate-value {
           flex: 1;
           font-weight: 600;
-          color: $color-black;
+          color: abs.$color-black;
         }
 
         .star::after {
@@ -200,7 +200,7 @@ $rate-space: 50px;
         .rate-bar {
           height: 5px;
           border-radius: 5px;
-          background-color: $color-primary;
+          background-color: abs.$color-primary;
           display: block;
 
           .rate-count {
@@ -212,7 +212,7 @@ $rate-space: 50px;
             padding-left: 5px;
             top: 50%;
             transform: translateY(-50%);
-            color: $color-grey;
+            color: abs.$color-grey;
             font-weight: 600;
             font-size: 15px;
             line-height: .9;
@@ -278,8 +278,8 @@ $rate-space: 50px;
     width: calc(100% - 12px);
     margin: 6px;
     padding: 15px;
-    border-radius: $border-radius;
-    @include background;
+    border-radius: abs.$border-radius;
+    @include abs.background;
 
     // @media (max-width: 991px) {
     //   width: calc(100% - 12px);
@@ -304,7 +304,7 @@ $rate-space: 50px;
 .latest-contribution-image,
 .vote-pic {
   position: relative;
-  border-radius: $border-radius;
+  border-radius: abs.$border-radius;
   overflow: hidden;
   margin-right: 10px;
   width: 60px;
@@ -342,14 +342,14 @@ $rate-space: 50px;
   font-size: 18px;
   line-height: 1.1;
   font-weight: 400;
-  color: $color-black;
+  color: abs.$color-black;
 }
 
 .vote-rating {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  color: $color-grey;
+  color: abs.$color-grey;
   font-size: 14px;
 }
 
@@ -364,9 +364,9 @@ $rate-space: 50px;
 }
 
 .vote-content {
-  color: $color-black;
+  color: abs.$color-black;
   margin-top: 8px;
-  color: $color-grey;
+  color: abs.$color-grey;
   font-weight: 400;
   line-height: 1.3;
   font-size: 16px;

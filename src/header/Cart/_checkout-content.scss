@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 #checkoutContent {
   .not-possible-info {
@@ -22,7 +22,7 @@
     max-width: 400px;
     width: 100%;
     padding-left: 17px;
-    border-radius: $border-radius;
+    border-radius: abs.$border-radius;
     font-size: 15px;
   }
 
@@ -68,7 +68,7 @@
           width: 100%;
           height: 100%;
           border-radius: 5px;
-          background-color: $color-primary;
+          background-color: abs.$color-primary;
           opacity: .2;
           filter: brightness(2);
           z-index: -1;
@@ -82,7 +82,7 @@
 
         &::after {
           content: '';
-          // border-color: $color-primary;
+          // border-color: abs.$color-primary;
           // outline-color: #fff;
           // background-color: #fff;
         }
@@ -116,7 +116,7 @@
           flex: 0 0 110px;
 
           &.for-free {
-            color: $color-primary;
+            color: abs.$color-primary;
           }
         }
 
@@ -144,7 +144,7 @@
         }
 
         &:hover {
-          background-color: $color-body-background;
+          background-color: abs.$color-body-background;
         }
 
         &::before {
@@ -176,9 +176,9 @@
           width: 14px;
           height: 14px;
           border-radius: 500px;
-          background-color: $color-black;
+          background-color: abs.$color-black;
           border: 2px solid #fff;
-          outline: 2px solid $color-black;
+          outline: 2px solid abs.$color-black;
         }
       }
     }
@@ -303,6 +303,6 @@
   margin-bottom: 10px;
 
   .btn {
-    border-radius: $border-radius;
+    border-radius: abs.$border-radius;
   }
 }

@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .recapitulation-table {
   text-align: left;
@@ -17,8 +17,8 @@
       position: relative;
       margin: 5px;
       padding: 10px;
-      border-radius: $border-radius;
-      border: 2px solid $color-body-background;
+      border-radius: abs.$border-radius;
+      border: 2px solid abs.$color-body-background;
       display: flex;
       align-items: flex-start;
 
@@ -42,7 +42,7 @@
       .p-name {
         padding-bottom: 0;
         padding-right: 130px + 10px;
-        color: $color-black;
+        color: abs.$color-black;
         font-weight: 500;
         font-size: 15px;
 
@@ -68,7 +68,7 @@
         font-size: 14px;
         padding-right: 10px;
         padding-top: 10px;
-        color: $color-grey;
+        color: abs.$color-grey;
 
         @media (max-width: 479px) {
           position: initial;
@@ -92,7 +92,7 @@
       }
 
       .p-price {
-        color: $color-black;
+        color: abs.$color-black;
         font-weight: 600;
         font-size: 15px;
 

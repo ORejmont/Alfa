@@ -1,11 +1,11 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .breadcrumbs {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 
-  margin-bottom: $small-gap - 5px;
+  margin-bottom: abs.$small-gap - 5px;
 
   font-size: 14px;
 
@@ -29,7 +29,7 @@
 
         &:hover {
           &::after {
-            color: $color-secondary;
+            color: abs.$color-secondary;
           }
         }
 
@@ -38,7 +38,7 @@
           margin-left: 2px;
           font-size: 15px;
           font-family: 'alfa';
-          color: $color-grey;
+          color: abs.$color-grey;
           transition: color .3s ease-in-out;
         }
       }
@@ -46,7 +46,7 @@
   }
 
   span {
-    color: $color-grey;
+    color: abs.$color-grey;
   }
 
   >span {
@@ -61,21 +61,21 @@
 
   a {
     text-decoration: none;
-    // background-color: #e7eaf1; // $color-nav-element-background-hover; // #e1e5ed;
+    // background-color: #e7eaf1; // abs.$color-nav-element-background-hover; // #e1e5ed;
     // border-radius: 50px;
     padding: 3px 5px;
     transition-duration: .3s;
 
     span {
-      color: $color-grey;
+      color: abs.$color-grey;
       transition-duration: .3s;
     }
 
     &:hover {
-      // background-color: $color-primary;
+      // background-color: abs.$color-primary;
 
       span {
-        color: $color-secondary;
+        color: abs.$color-secondary;
         text-decoration: underline;
       }
     }

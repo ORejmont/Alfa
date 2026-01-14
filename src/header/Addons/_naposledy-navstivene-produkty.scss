@@ -1,5 +1,5 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 body .dkLabVisitedProductsNew--smallPadding {
-  border-radius: $border-radius;
+  border-radius: abs.$border-radius;
 }

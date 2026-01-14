@@ -1,27 +1,27 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .homepage-box.welcome-wrapper {
-  margin: $large-gap 0;
+  margin: abs.$large-gap 0;
 
   @media (min-width: 768px) {
     margin-bottom: 0;
   }
 
   @media (max-width: 991px) {
-    margin-top: $mobile-gap + 10px;
+    margin-top: abs.$mobile-gap + 10px;
   }
 
   @media (max-width: 767px) {
-    margin: $mobile-gap 0;
+    margin: abs.$mobile-gap 0;
   }
 
   .welcome-wrapper {
     border: 2px solid transparent;
-    border-radius: $border-radius;
+    border-radius: abs.$border-radius;
 
     text-align: center;
 
-    @include background;
+    @include abs.background;
 
     padding: 20px;
 
@@ -38,7 +38,7 @@
     div {
       line-height: 1.6;
       font-size: 16px;
-      color: $color-grey;
+      color: abs.$color-grey;
     }
 
     li {

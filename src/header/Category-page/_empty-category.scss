@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .type-category #content {
   width: 100%;
@@ -18,7 +18,7 @@
   }
 
   h2 {
-    color: $color-grey;
+    color: abs.$color-grey;
     margin-top: -5px;
   }
 
