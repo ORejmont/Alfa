@@ -1,0 +1,5 @@
+@use "../Abstracts" as abs;
+
+body .dkLabVisitedProductsNew--smallPadding {
+  border-radius: abs.$border-radius;
+}
