@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "../Abstracts" as abs;
 
 .type-manufacturers-listing {
   .manufacturers {
@@ -18,8 +18,8 @@
 
     >li {
       width: calc(100% / 5 - 15px);
-      @include background;
-      border-radius: $border-radius;
+      @include abs.background;
+      border-radius: abs.$border-radius;
       margin: 7.5px;
 
       padding: 15px;
@@ -39,10 +39,10 @@
       li {
         a {
           text-decoration: underline;
-          color: $color-black;
+          color: abs.$color-black;
 
           &:hover {
-            color: $color-black;
+            color: abs.$color-black;
             text-decoration: none;
           }
         }

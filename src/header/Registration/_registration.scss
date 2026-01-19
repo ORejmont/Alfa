@@ -1,9 +1,9 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .co-box {
-  @include background;
+  @include abs.background;
   padding: 25px;
-  border-radius: $border-radius;
+  border-radius: abs.$border-radius;
   margin-bottom: 10px;
 
   @media (max-width: 767px) {
@@ -44,7 +44,7 @@ select {
   border: 1px solid #c4cad5;
   padding: 10px 10px;
   background-color: #fff;
-  color: $color-black;
+  color: abs.$color-black;
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
@@ -103,7 +103,7 @@ select {
   transition: background-color .3s ease-in-out;
 
   &:hover {
-    background-color: $color-nav-element-background-hover;
+    background-color: abs.$color-nav-element-background-hover;
   }
 }
 
@@ -113,7 +113,7 @@ select {
   transition: background-color 0s ease-in-out;
 
   &:hover {
-    background-color: $color-nav-element-background-hover;
+    background-color: abs.$color-nav-element-background-hover;
   }
 }
 
@@ -170,16 +170,16 @@ select {
   left: 0;
   height: 360px;
   width: 300px;
-  border: 1px solid $color-nav-element-background-hover;
+  border: 1px solid abs.$color-nav-element-background-hover;
   background-color: #fff;
-  border-radius: $border-radius;
+  border-radius: abs.$border-radius;
   overflow-y: auto;
   z-index: 9;
 }
 
 #register-form {
-  @include background;
-  border-radius: $border-radius;
+  @include abs.background;
+  border-radius: abs.$border-radius;
   padding: 25px;
 
   .co-box {

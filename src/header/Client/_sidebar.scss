@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .customer-page {
   #content-wrapper>.content-wrapper-in {
@@ -25,7 +25,7 @@
           margin-bottom: 0;
 
           &.active a {
-            color: $color-primary;
+            color: abs.$color-primary;
           }
 
           &.logout {
@@ -38,7 +38,7 @@
               font-size: 14px;
 
               &:hover {
-                background-color: $color-secondary;
+                background-color: abs.$color-secondary;
               }
             }
           }

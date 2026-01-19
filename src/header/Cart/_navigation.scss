@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .cart-header {
   // counter-reset: step;
@@ -14,8 +14,8 @@
   $cart-nav-space: 10px;
   $cart-nav-space-mobile: 15px;
 
-  border: 2px solid $color-body-background;
-  border-radius: $border-radius;
+  border: 2px solid abs.$color-body-background;
+  border-radius: abs.$border-radius;
 
   // &.step-0 {
   //   margin-bottom: 10px;
@@ -49,7 +49,7 @@
     width: calc(100% / 3);
     list-style-type: none;
     margin: 0;
-    color: $color-grey;
+    color: abs.$color-grey;
 
     position: relative;
 
@@ -117,18 +117,18 @@
 
     &.active,
     &.completed {
-      border-color: $color-body-background;
-      color: $color-black;
+      border-color: abs.$color-body-background;
+      color: abs.$color-black;
 
       >* {
         font-weight: 600;
-        color: $color-black;
+        color: abs.$color-black;
       }
     }
 
     &.active>*::before {
-      background-color: $color-black;
-      border-color: $color-black;
+      background-color: abs.$color-black;
+      border-color: abs.$color-black;
       color: #fff;
     }
 
@@ -150,10 +150,10 @@
     }
 
     >a {
-      color: $color-grey;
+      color: abs.$color-grey;
 
       &:hover {
-        color: $color-primary;
+        color: abs.$color-primary;
       }
     }
   }

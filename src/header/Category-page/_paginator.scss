@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .listingControls {
   .sr-only {
@@ -112,7 +112,7 @@
     justify-content: center;
 
     &:not(.btn) {
-      color: $color-primary;
+      color: abs.$color-primary;
       text-decoration: none;
 
       &:hover {

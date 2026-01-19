@@ -1,11 +1,11 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .in-login {
   #content {
     form {
-      @include background;
+      @include abs.background;
       padding: 25px;
-      border-radius: $border-radius;
+      border-radius: abs.$border-radius;
 
       @media (max-width: 767px) {
         padding: 15px;
@@ -25,7 +25,7 @@
         margin-top: 10px;
 
         a {
-          color: $color-black;
+          color: abs.$color-black;
           text-decoration: none;
           margin-bottom: 2px;
           font-size: 15px;
@@ -36,7 +36,7 @@
           }
 
           &:hover {
-            color: $color-primary;
+            color: abs.$color-primary;
             text-decoration: underline;
           }
         }

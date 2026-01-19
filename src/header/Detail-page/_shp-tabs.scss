@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .shp-tabs-wrapper {
   margin-top: 40px;
@@ -17,8 +17,8 @@
   justify-content: space-between;
   position: relative;
 
-  @include background;
-  border-radius: $border-radius;
+  @include abs.background;
+  border-radius: abs.$border-radius;
 
   border: 4px solid #fff;
 
@@ -50,15 +50,15 @@
 
         >a {
           padding: 11px 25px;
-          border-radius: $border-radius;
+          border-radius: abs.$border-radius;
           text-decoration: none;
           font-size: 16px;
           transition: background-color .3s ease-in-out;
-          color: $color-black;
+          color: abs.$color-black;
           white-space: nowrap;
 
           &:hover {
-            background-color: $color-body-background;
+            background-color: abs.$color-body-background;
           }
         }
       }
@@ -70,7 +70,7 @@
     background-color: transparent;
 
     transition: background-color .3s ease-in-out;
-    border-radius: $border-radius;
+    border-radius: abs.$border-radius;
     border: 0;
     box-shadow: none;
     font-size: 0;
@@ -84,13 +84,13 @@
     &::before {
       content: '\f10c';
       font-family: 'alfa';
-      color: $color-black;
+      color: abs.$color-black;
       line-height: 1.1;
       font-size: 16px;
     }
 
     &:hover {
-      background-color: $color-body-background;
+      background-color: abs.$color-body-background;
     }
   }
 
@@ -101,8 +101,8 @@
     position: absolute;
     top: calc(100% + 4px);
     right: 0;
-    @include background;
-    border-radius: $border-radius;
+    @include abs.background;
+    border-radius: abs.$border-radius;
     overflow: hidden;
     max-width: 280px;
     border: 4px solid #fff;
@@ -115,13 +115,13 @@
 
     a {
       padding: 10px;
-      border-radius: $border-radius;
+      border-radius: abs.$border-radius;
       font-size: 15px;
       text-decoration: none;
-      color: $color-black;
+      color: abs.$color-black;
 
       &:hover {
-        background-color: $color-body-background;
+        background-color: abs.$color-body-background;
       }
     }
   }
@@ -153,12 +153,12 @@
       }
 
       .basic-description {
-        @include background;
+        @include abs.background;
         padding: 15px;
-        border-radius: $border-radius;
+        border-radius: abs.$border-radius;
         flex: 1;
         line-height: 1.4;
-        color: $color-grey;
+        color: abs.$color-grey;
 
         h1,
         h2,
@@ -167,14 +167,14 @@
         h5,
         h6 {
           line-height: 1.1;
-          color: $color-black
+          color: abs.$color-black
         }
       }
 
       .extended-description {
-        @include background;
+        @include abs.background;
         padding: 15px;
-        border-radius: $border-radius;
+        border-radius: abs.$border-radius;
         flex: 0 0 420px;
         margin-left: 20px;
 
@@ -192,20 +192,20 @@
             font-size: 15px;
 
             &:nth-of-type(odd) {
-              background-color: $color-body-background;
+              background-color: abs.$color-body-background;
             }
 
             th,
             td {
               padding: 10px;
-              color: $color-black;
+              color: abs.$color-black;
 
               a {
-                color: $color-primary;
+                color: abs.$color-primary;
                 text-decoration: none;
 
                 &:hover {
-                  color: $color-primary;
+                  color: abs.$color-primary;
                   text-decoration: underline;
                 }
               }
@@ -214,15 +214,15 @@
             th {
               font-weight: 700;
 
-              border-top-left-radius: $border-radius;
-              border-bottom-left-radius: $border-radius;
+              border-top-left-radius: abs.$border-radius;
+              border-bottom-left-radius: abs.$border-radius;
             }
 
             td {
               font-weight: 400;
 
-              border-top-right-radius: $border-radius;
-              border-bottom-right-radius: $border-radius;
+              border-top-right-radius: abs.$border-radius;
+              border-bottom-right-radius: abs.$border-radius;
             }
           }
         }
@@ -235,8 +235,8 @@
       display: flex;
       align-items: center;
       padding: 10px;
-      border-radius: $border-radius;
-      @include background;
+      border-radius: abs.$border-radius;
+      @include abs.background;
       margin-bottom: 10px;
 
       @media (max-width: 767px) {
@@ -264,7 +264,7 @@
         .variant-name {
           margin-bottom: 3px;
           font-weight: 500;
-          color: $color-black;
+          color: abs.$color-black;
         }
       }
 
@@ -305,7 +305,7 @@
         .price-additional {
           font-size: 14px;
           margin-top: 1px;
-          color: $color-grey;
+          color: abs.$color-grey;
         }
       }
 
@@ -355,13 +355,13 @@
   #relatedFiles,
   #productVideos {
     padding: 15px;
-    @include background;
-    border-radius: $border-radius;
+    @include abs.background;
+    border-radius: abs.$border-radius;
   }
 
   #productVideos {
     iframe {
-      border-radius: $border-radius;
+      border-radius: abs.$border-radius;
     }
   }
 
@@ -381,8 +381,8 @@
 
   #productDiscussion {
     padding: 15px;
-    @include background;
-    border-radius: $border-radius;
+    @include abs.background;
+    border-radius: abs.$border-radius;
 
     p[data-testid="textCommentNotice"] {
       margin-bottom: 15px;
@@ -399,7 +399,7 @@
         margin-bottom: 10px;
         padding-bottom: 10px;
 
-        border-bottom: 1px solid $color-grey-light;
+        border-bottom: 1px solid abs.$color-grey-light;
 
         &:last-of-type {
           border-bottom: 0;
@@ -423,7 +423,7 @@
 
         .vote-name {
           font-size: 15px;
-          color: $color-grey;
+          color: abs.$color-grey;
         }
       }
 
@@ -446,14 +446,14 @@
       padding: 14px 25px;
       text-align: center;
 
-      background-color: $color-primary;
+      background-color: abs.$color-primary;
       color: #fff;
-      font-family: $poppins;
+      font-family: abs.$poppins;
 
       transition-duration: .3s;
 
       &:hover {
-        background-color: $color-secondary;
+        background-color: abs.$color-secondary;
       }
     }
 

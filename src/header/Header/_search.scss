@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "../Abstracts" as abs;
 
 .search {
   position: relative;
@@ -15,10 +15,10 @@
       outline: none;
 
       border-radius: 24px;
-      background-color: $color-nav-element-background;
+      background-color: abs.$color-nav-element-background;
       padding: 5px 54px 5px 20px;
 
-      color: $color-black;
+      color: abs.$color-black;
       font-size: 15px;
       font-weight: 400;
 
@@ -34,11 +34,11 @@
       }
 
       &::placeholder {
-        color: rgba($color: $color-black, $alpha: .5);
+        color: rgba($color: abs.$color-black, $alpha: .5);
       }
 
       &:focus {
-        border-color: $color-nav-element-background-hover;
+        border-color: abs.$color-nav-element-background-hover;
       }
     }
 
@@ -62,13 +62,13 @@
 
       transition-duration: .3s;
 
-      border: 1px solid $color-nav-element-background;
+      border: 1px solid abs.$color-nav-element-background;
 
       &::before {
         content: '\f111';
         font-family: 'alfa';
         font-size: 20px;
-        color: $color-black;
+        color: abs.$color-black;
         font-weight: 400;
 
         // @media (min-width: 768px) {
@@ -78,11 +78,11 @@
       }
 
       &:hover {
-        background-color: $color-nav-element-background-hover;
+        background-color: abs.$color-nav-element-background-hover;
 
         // @media (min-width: 768px) {
         //   &::before {
-        //     color: $color-black;
+        //     color: abs.$color-black;
         //   }
         // }
       }
@@ -102,11 +102,11 @@
       overflow-y: auto;
 
       background-color: #fff;
-      border: 2px solid $color-nav-element-background;
-      border-radius: $border-radius;
+      border: 2px solid abs.$color-nav-element-background;
+      border-radius: abs.$border-radius;
 
       @media (max-width: 767px) {
-        border-color: $color-nav-element-background-hover;
+        border-color: abs.$color-nav-element-background-hover;
         border-width: 1px;
         max-height: calc(100vh - 32px - 68px - 60px - 50px - 100px); // Edit pro mobilní verzi
       }
@@ -122,7 +122,7 @@
           transition-duration: .3s;
 
           &:hover {
-            background-color: $color-nav-element-background;
+            background-color: abs.$color-nav-element-background;
           }
         }
       }
@@ -134,7 +134,7 @@
         padding: 5px;
 
         >div {
-          border-bottom: 1px solid $color-nav-element-background;
+          border-bottom: 1px solid abs.$color-nav-element-background;
           padding-bottom: 5px;
 
           &:last-of-type {
@@ -151,7 +151,7 @@
 
           .search-whisperer-title {
             text-align: center;
-            font-family: $poppins;
+            font-family: abs.$poppins;
             font-size: 18px;
             line-height: 1.1;
             padding-top: 10px;
@@ -166,7 +166,7 @@
 
         &.search-whisperer-empty {
           padding: 12px 15px;
-          color: $color-black;
+          color: abs.$color-black;
           text-align: center;
           align-items: center;
           font-size: 15px;
@@ -175,7 +175,7 @@
 
         a {
           text-decoration: none;
-          color: $color-black;
+          color: abs.$color-black;
           padding: 8px 15px;
           background-color: #fff;
           line-height: 1.1;
@@ -183,10 +183,10 @@
           width: calc(100% / 4 - 10px);
           min-width: 0;
 
-          border-bottom: 1px solid $color-nav-element-background;
+          border-bottom: 1px solid abs.$color-nav-element-background;
 
           border: 0;
-          background-color: $color-nav-element-background;
+          background-color: abs.$color-nav-element-background;
           margin: 5px;
           min-height: 60px;
           border-radius: 4px;
@@ -244,7 +244,7 @@
           }
 
           &:hover {
-            background-color: $color-nav-element-background-hover;
+            background-color: abs.$color-nav-element-background-hover;
           }
 
           &:last-of-type {
@@ -258,7 +258,7 @@
         align-items: flex-start;
 
         +.search-whisperer-documents {
-          border-top: 1px solid $color-nav-element-background;
+          border-top: 1px solid abs.$color-nav-element-background;
         }
 
         >li {
@@ -279,7 +279,7 @@
 
           >a {
             padding: 8px 8px;
-            border-bottom: 1px solid $color-nav-element-background;
+            border-bottom: 1px solid abs.$color-nav-element-background;
             background-color: #fff;
             width: 100%;
 
@@ -307,7 +307,7 @@
               min-width: 0;
 
               .p-name {
-                color: $color-black;
+                color: abs.$color-black;
                 line-height: 1.1;
                 font-weight: 400;
                 font-size: 16px;
@@ -318,14 +318,14 @@
                 font-weight: 400;
                 line-height: 1.1;
                 margin-top: 2px;
-                color: $color-grey;
+                color: abs.$color-grey;
               }
             }
 
             .price {
               margin-left: auto;
               line-height: 1.1;
-              color: $color-black;
+              color: abs.$color-black;
               font-size: 15px;
               flex: 0 1 90px;
               text-align: right;

@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .languagesMenu {
   @media (max-width: 767px) {
@@ -48,16 +48,16 @@
         }
 
         &:hover {
-          background-color: $color-nav-element-background-hover;
-          color: $color-black;
+          background-color: abs.$color-nav-element-background-hover;
+          color: abs.$color-black;
         }
       }
 
       &.open {
         .languagesMenu__header {
           border-radius: 16px 16px 16px 0;
-          background-color: $color-nav-element-background-hover;
-          color: $color-black;
+          background-color: abs.$color-nav-element-background-hover;
+          color: abs.$color-black;
 
           .caret::before {
             transform: rotate(-180deg);
@@ -77,9 +77,9 @@
       position: absolute;
       z-index: 9999;
       max-width: 130px;
-      @include background;
-      border-radius: 0 $border-radius $border-radius $border-radius;
-      border: 2px solid $color-nav-element-background-hover;
+      @include abs.background;
+      border-radius: 0 abs.$border-radius abs.$border-radius abs.$border-radius;
+      border: 2px solid abs.$color-nav-element-background-hover;
       padding: 5px;
 
       .languagesMenu__list__link {
@@ -92,10 +92,10 @@
         line-height: 1.1;
         font-size: 14px;
         font-weight: 500;
-        color: $color-black;
+        color: abs.$color-black;
 
         &:hover {
-          background-color: $color-nav-element-background-hover;
+          background-color: abs.$color-nav-element-background-hover;
         }
 
         .shp-flag {

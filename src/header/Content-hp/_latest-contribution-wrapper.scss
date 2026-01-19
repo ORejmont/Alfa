@@ -1,15 +1,15 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 body {
   .latest-contribution-wrapper {
-    margin-top: $large-gap - 10px;
+    margin-top: abs.$large-gap - 10px;
 
     @media (max-width: 991px) {
-      margin-top: $mobile-gap + 10px - 10px;
+      margin-top: abs.$mobile-gap + 10px - 10px;
     }
 
     @media (max-width: 767px) {
-      margin-top: $mobile-gap - 10px;
+      margin-top: abs.$mobile-gap - 10px;
     }
   }
 }
@@ -27,9 +27,9 @@ body {
 
     margin: 10px;
 
-    @include background;
+    @include abs.background;
 
-    border-radius: $border-radius;
+    border-radius: abs.$border-radius;
     padding: 20px;
 
     h2 {
@@ -43,7 +43,7 @@ body {
       align-items: flex-start;
 
       border: 2px solid #f8f8f8;
-      border-radius: $border-radius;
+      border-radius: abs.$border-radius;
       padding: 10px;
       text-decoration: none;
 
@@ -68,7 +68,7 @@ body {
 
         i {
           margin: 0 4px;
-          color: $color-grey;
+          color: abs.$color-grey;
           font-size: 14px;
         }
 
@@ -79,7 +79,7 @@ body {
         .latest-contribution-author,
         .latest-contribution-date,
         .latest-contribution-title {
-          color: $color-grey;
+          color: abs.$color-grey;
           font-size: 14px;
           display: block;
           margin-top: 3px;
@@ -87,7 +87,7 @@ body {
 
         // .latest-contribution-title {
         //   width: 100%;
-        //   color: $color-grey;
+        //   color: abs.$color-grey;
         //   margin-top: 3px;
         //   font-size: 15px;
         //   font-weight: 500;
@@ -96,7 +96,7 @@ body {
 
       .latest-contribution-description {
         margin-top: 1px;
-        color: $color-black;
+        color: abs.$color-black;
         font-weight: 400;
         line-height: 1.3;
         font-size: 15px;
@@ -111,7 +111,7 @@ body {
         font-size: 18px;
         line-height: 1.1;
         font-weight: 400;
-        color: $color-black;
+        color: abs.$color-black;
 
         @media (max-width: 479px) {
           font-size: 16px;

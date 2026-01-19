@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "../Abstracts" as abs;
 
 .shipping-options-popup {
   container-type: inline-size; // totéž co container: inline-size
@@ -165,7 +165,7 @@ body {
 
     @media (min-width: 768px) {
       &:hover::before {
-        background-color: $color-primary;
+        background-color: abs.$color-primary;
         color: #fff;
       }
     }
@@ -182,12 +182,12 @@ body {
       left: 15px;
       font-size: 14px;
       line-height: 1;
-      color: $color-black;
+      color: abs.$color-black;
 
       border-radius: 100%;
       width: 35px;
       height: 35px;
-      @include background;
+      @include abs.background;
 
       @media (min-width: 768px) {
         transition: background-color .3s ease-out, color .3s ease-out;
@@ -339,7 +339,7 @@ body {
 
   #cboxContent {
     border-color: var(--colors-foregrounds-borders-secondary);
-    border-radius: $border-radius;
+    border-radius: abs.$border-radius;
   }
 
   .cookiesSetting__item__status {

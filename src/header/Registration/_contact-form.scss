@@ -1,9 +1,9 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 #formContact {
-  @include background;
+  @include abs.background;
   padding: 25px;
-  border-radius: $border-radius;
+  border-radius: abs.$border-radius;
   margin-top: 10px;
 
   @media (max-width: 767px) {

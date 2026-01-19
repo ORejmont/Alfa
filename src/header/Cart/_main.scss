@@ -1,10 +1,10 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .ordering-process {
   padding-bottom: 40px;
 
   @media (max-width: 767px) {
-    padding-bottom: $page-side-padding-mobile;
+    padding-bottom: abs.$page-side-padding-mobile;
   }
 
   #content {
@@ -38,9 +38,9 @@
 }
 
 .cart-content {
-  @include background;
+  @include abs.background;
   padding: 15px;
-  border-radius: $border-radius;
+  border-radius: abs.$border-radius;
 
   @media (max-width: 767px) {
     padding: 15px;

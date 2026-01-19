@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 @media (min-width: 768px) {
   .scrolled-custom.scrolled-down body.type-index:not(.header-hover) .row.banners-row .top-categories-custom {
@@ -180,7 +180,7 @@
     position: absolute;
     display: block;
     border: 6px solid transparent;
-    border-top: 6px solid $color-black;
+    border-top: 6px solid abs.$color-black;
     border-right: 6px solid transparent;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
@@ -202,7 +202,7 @@
     top: 50%;
     border-radius: 50%;
     border: 6px solid transparent;
-    border-bottom: 6px solid $color-black;
+    border-bottom: 6px solid abs.$color-black;
     border-left: 6px solid transparent;
     animation: rotation 1s linear infinite;
     z-index: 1;
@@ -237,10 +237,10 @@
     position: sticky;
     top: 124px + 15px;
     width: 300px;
-    @include background;
-    border-radius: $border-radius;
-    margin-right: $small-gap;
-    margin-bottom: $small-gap;
+    @include abs.background;
+    border-radius: abs.$border-radius;
+    margin-right: abs.$small-gap;
+    margin-bottom: abs.$small-gap;
 
     transition: top .3s ease-out;
 
@@ -249,7 +249,7 @@
     h4 {
       margin-bottom: 10px;
       font-size: 20px;
-      font-family: $poppins;
+      font-family: abs.$poppins;
       font-weight: 600;
     }
 
@@ -257,7 +257,7 @@
       display: flex;
       flex-wrap: wrap;
       border: 1px solid #f5f5f5;
-      border-radius: $border-radius;
+      border-radius: abs.$border-radius;
       overflow: hidden;
 
       .top-category-item {
@@ -323,12 +323,12 @@
           width: 112px;
           height: 80px;
           object-fit: contain;
-          border-radius: $border-radius;
+          border-radius: abs.$border-radius;
           margin: 0 auto;
         }
 
         p {
-          color: $color-black;
+          color: abs.$color-black;
           margin-top: 6px;
           font-size: 15px;
           text-align: center;
@@ -361,11 +361,11 @@
 @media (max-width: 767px) {
   .type-index #content>.row.banners-row {
     .top-categories-custom {
-      @include background;
-      border-radius: $border-radius;
+      @include abs.background;
+      border-radius: abs.$border-radius;
       padding: 15px;
 
-      margin-bottom: $small-gap-12;
+      margin-bottom: abs.$small-gap-12;
 
       h4 {
         text-align: center;

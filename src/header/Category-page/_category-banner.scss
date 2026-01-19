@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 @media (max-width: 479px) {
   #products+.banner-category {
@@ -11,7 +11,7 @@
 
   position: relative;
   overflow: hidden;
-  border-radius: $border-radius;
+  border-radius: abs.$border-radius;
 
   @media (max-width: 479px) {
     margin: 12px 0;
@@ -114,7 +114,7 @@
 
     &.has-background {
       background-color: #fff;
-      border-radius: $border-radius;
+      border-radius: abs.$border-radius;
       bottom: 0;
 
       max-width: calc(85% - 24px);
@@ -155,13 +155,13 @@
 
       .extended-banner-title,
       .extended-banner-text {
-        color: $color-black;
+        color: abs.$color-black;
       }
 
       .extended-banner-link {
         color: #fff;
-        background-color: $color-black;
-        border-color: $color-black;
+        background-color: abs.$color-black;
+        border-color: abs.$color-black;
       }
     }
 
@@ -173,18 +173,18 @@
       }
 
       .extended-banner-link {
-        color: $color-black;
+        color: abs.$color-black;
         background-color: #fff;
         border-color: #fff;
       }
     }
 
     .extended-banner-title {
-      color: $color-black;
+      color: abs.$color-black;
       font-size: clamp(18px, 1vw, 22px);
       font-size: clamp(18px, 1cqw, 22px);
       font-weight: 600;
-      font-family: $poppins;
+      font-family: abs.$poppins;
       line-height: 1.1;
 
       overflow-wrap: break-word;
@@ -205,12 +205,12 @@
     }
 
     .extended-banner-text {
-      color: $color-black;
+      color: abs.$color-black;
       font-size: clamp(26px, 1.4vw, 28px);
       font-size: clamp(26px, 1.6cqw, 28px);
       font-weight: 600;
       line-height: 1.1;
-      font-family: $poppins;
+      font-family: abs.$poppins;
 
       width: 100%;
 
@@ -228,13 +228,13 @@
     }
 
     .extended-banner-link {
-      background-color: $color-black;
+      background-color: abs.$color-black;
       padding: 10px 20px;
       font-weight: 500;
       font-size: 16px;
       color: #fff;
       border-radius: 150px;
-      font-family: $poppins;
+      font-family: abs.$poppins;
 
       pointer-events: all;
 
@@ -242,7 +242,7 @@
       position: relative;
       z-index: 1;
       overflow: hidden;
-      border: 2px solid $color-black;
+      border: 2px solid abs.$color-black;
 
       &::after {
         content: '';
@@ -251,7 +251,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background-color: $color-primary;
+        background-color: abs.$color-primary;
         border-radius: 150px;
         z-index: -1;
         transition-duration: .3s;

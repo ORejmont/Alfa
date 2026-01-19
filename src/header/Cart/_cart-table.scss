@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 .cart-table {
   width: 100%;
@@ -38,8 +38,8 @@
         flex-direction: column;
         align-items: center;
         padding: 10px;
-        border-radius: $border-radius;
-        background-color: $color-body-background;
+        border-radius: abs.$border-radius;
+        background-color: abs.$color-body-background;
         text-align: center;
 
         @media (max-width: 1439px) {
@@ -67,7 +67,7 @@
 
           .cart-related-name {
             text-decoration: none;
-            color: $color-black;
+            color: abs.$color-black;
             font-weight: 500;
             padding-top: 4px;
 
@@ -87,7 +87,7 @@
 
           .price-final {
             display: block;
-            color: $color-black;
+            color: abs.$color-black;
             margin-bottom: 4px;
             font-size: 15px;
           }
@@ -100,13 +100,13 @@
     position: relative;
     display: flex;
     padding: 10px;
-    border: 2px solid $color-body-background;
-    border-radius: $border-radius;
+    border: 2px solid abs.$color-body-background;
+    border-radius: abs.$border-radius;
 
     .p-name {
       font-size: 15px;
       line-height: 1.1;
-      color: $color-black;
+      color: abs.$color-black;
       font-weight: 500;
 
       @media (max-width: 991px) {
@@ -164,8 +164,8 @@
     margin-bottom: 10px;
     // height: 100px + 10px * 2 + 2px * 2;
     padding: 10px;
-    border-radius: $border-radius;
-    border: 2px solid $color-body-background;
+    border-radius: abs.$border-radius;
+    border: 2px solid abs.$color-body-background;
     padding-right: 130px;
 
     .cart-xyDiscount__description {
@@ -206,7 +206,7 @@
         line-height: 14px;
         text-align: center;
         font-size: 12px;
-        border-radius: $border-radius;
+        border-radius: abs.$border-radius;
         background-color: var(--xy-discount-banner-color);
         color: #fff;
         position: relative;
@@ -230,7 +230,7 @@
       font-size: 15px;
       line-height: 1.1;
       text-decoration: none;
-      color: $color-black;
+      color: abs.$color-black;
       font-weight: 500;
       margin-bottom: 3px;
 
@@ -261,7 +261,7 @@
     }
 
     .availability-amount {
-      color: $color-grey;
+      color: abs.$color-grey;
       font-size: 13px;
       margin-top: 1px;
     }
@@ -295,13 +295,13 @@
     bottom: 0 + 10px;
     text-align: center;
     font-size: 16px;
-    color: $color-black;
+    color: abs.$color-black;
 
     span[data-testid="readonlyCartItemAmount"],
     .down-payment-name {
       border-radius: 19px;
       background-color: #fff;
-      border: 1px solid $color-nav-element-background-hover;
+      border: 1px solid abs.$color-nav-element-background-hover;
       text-align: center;
       font-size: 16px;
       padding: 9px 34px;
@@ -331,7 +331,7 @@
     padding-bottom: 10px;
     padding-right: 10px;
 
-    color: $color-grey;
+    color: abs.$color-grey;
 
     strong {
       font-weight: 400;
@@ -367,7 +367,7 @@
     }
 
     .price-final {
-      color: $color-black;
+      color: abs.$color-black;
     }
 
     .remove-item {
@@ -388,7 +388,7 @@
       &::before {
         content: '\f107';
         font-family: 'alfa';
-        color: $color-grey;
+        color: abs.$color-grey;
         font-weight: 400;
         font-size: 14px;
       }

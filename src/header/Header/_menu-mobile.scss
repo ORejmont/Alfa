@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use "../Abstracts" as abs;
 
 @media (max-width: 767px) {
   body.navigation-window-visible {
@@ -39,14 +39,14 @@
 
     position: absolute;
     background-color: #fff;
-    width: calc(100% + $page-side-padding-mobile * 2);
+    width: calc(100% + abs.$page-side-padding-mobile * 2);
 
     top: 60px;
     bottom: 0;
-    left: -$page-side-padding-mobile;
-    right: -$page-side-padding-mobile;
+    left: calc(-1 * abs.$page-side-padding-mobile);
+    right: calc(-1 * abs.$page-side-padding-mobile);
 
-    border-top: 1px solid $color-nav-element-background;
+    border-top: 1px solid abs.$color-nav-element-background;
 
     .navigation-in {
       position: relative;
@@ -70,10 +70,10 @@
     }
 
     .navigationActions {
-      border-top: 2px solid $color-nav-element-background;
+      border-top: 2px solid abs.$color-nav-element-background;
 
       a {
-        padding: 9.415px $page-side-padding-mobile 9.415px $page-side-padding-mobile;
+        padding: 9.415px abs.$page-side-padding-mobile 9.415px abs.$page-side-padding-mobile;
         width: 100%;
         text-align: left;
         display: flex;
@@ -84,9 +84,9 @@
         white-space: initial;
         transition: color 0.3s ease-in-out, padding 0.3s ease-in-out;
         font-weight: 600;
-        color: $color-black;
+        color: abs.$color-black;
         text-decoration: none;
-        font-family: $poppins;
+        font-family: abs.$poppins;
       }
 
       .navigationActions__flagWrapper {
@@ -191,13 +191,13 @@
         }
 
         &.ext>a {
-          padding: 9.415px 45px 9.415px $page-side-padding-mobile;
+          padding: 9.415px 45px 9.415px abs.$page-side-padding-mobile;
         }
 
         >a {
           width: 100%;
           text-align: left;
-          padding: 9.415px $page-side-padding-mobile;
+          padding: 9.415px abs.$page-side-padding-mobile;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -217,9 +217,9 @@
             right: 0;
             top: 0;
             margin: 0;
-            width: 30px + $page-side-padding-mobile;
+            width: 30px + abs.$page-side-padding-mobile;
             height: 100%;
-            padding-right: $page-side-padding-mobile;
+            padding-right: abs.$page-side-padding-mobile;
 
             display: flex;
             align-items: center;
@@ -228,7 +228,7 @@
             &::after {
               content: '\f10e';
               font-size: 12px;
-              color: $color-black;
+              color: abs.$color-black;
               margin-top: -1px;
               transform: rotate(90deg);
               font-family: 'alfa';
@@ -283,9 +283,9 @@
                 width: 100%;
                 font-weight: 600;
                 text-align: left;
-                padding: 9.415px $page-side-padding-mobile;
+                padding: 9.415px abs.$page-side-padding-mobile;
                 font-size: 16px;
-                font-family: $poppins;
+                font-family: abs.$poppins;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
@@ -301,7 +301,7 @@
               width: 100%;
               font-weight: 600;
               text-align: left;
-              padding: 9.415px $page-side-padding-mobile;
+              padding: 9.415px abs.$page-side-padding-mobile;
 
               font-size: 16px;
               min-height: auto;
@@ -312,7 +312,7 @@
 
             &:first-of-type>div>a,
             &:first-of-type>a:not(.menu-image) {
-              padding: calc(9.415px + 8px) $page-side-padding-mobile 9.415px $page-side-padding-mobile;
+              padding: calc(9.415px + 8px) abs.$page-side-padding-mobile 9.415px abs.$page-side-padding-mobile;
             }
           }
         }
@@ -328,13 +328,13 @@
           >a {
             color: #848891;
 
-            padding: 9.415px $page-side-padding-mobile 9.415px 33px;
+            padding: 9.415px abs.$page-side-padding-mobile 9.415px 33px;
 
-            border-bottom: 1px solid $color-nav-element-background;
+            border-bottom: 1px solid abs.$color-nav-element-background;
 
             .submenu-arrow {
               padding-right: 0;
-              padding-left: $page-side-padding-mobile;
+              padding-left: abs.$page-side-padding-mobile;
               width: 100%;
               right: initial;
               left: 0;
