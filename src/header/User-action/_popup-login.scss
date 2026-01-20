@@ -1,0 +1,139 @@
+@use "../Abstracts" as abs;
+
+.login-widget {
+  position: absolute;
+  top: 100px - 32px;
+  right: 140px;
+  @include abs.popup_background;
+  border-radius: abs.$border-radius;
+  z-index: 11;
+  opacity: 0;
+  pointer-events: none;
+  padding: 20px;
+
+  transition-duration: .3s;
+  text-align: center;
+
+  max-width: 305px;
+  width: 305px;
+
+  @media (max-width: 767px) {
+    position: fixed;
+    top: 60px !important;
+    height: calc(100% - 60px);
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-width: none;
+    border-radius: 0;
+
+    transition-duration: 0s;
+
+    border: 0;
+    border-top: 1px solid abs.$color-nav-element-background;
+  }
+
+  input {
+    width: 100%;
+    max-width: 300px;
+    background-color: abs.$color-nav-element-background;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-family: abs.$poppins;
+    font-weight: 600;
+
+    @media (max-width: 767px) {
+      font-size: 22px;
+    }
+  }
+
+  .input-wrapper {
+    width: 100%;
+  }
+
+  .login-wrapper {
+    margin-top: 15px;
+    width: 100%;
+
+    .password-helper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+
+      >a {
+        font-size: 14px;
+        margin-bottom: 7px;
+        color: abs.$color-black;
+
+        &:hover {
+          text-decoration: underline;
+          color: abs.$color-primary;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .no-display {
+    display: none;
+  }
+}
+
+.ordering-process .login-widget {
+  right: 0;
+}
+
+.login-window-visible {
+  .login-widget {
+    opacity: 1;
+    pointer-events: auto;
+    border-top-right-radius: 0;
+  }
+
+  #header .top-nav-button-login,
+  #header .top-nav-button-account {
+    background-color: abs.$color-nav-element-background-hover;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    @media (max-width: 767px) {
+      background-color: abs.$color-nav-element-background;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+
+      &::before {
+        content: '\f107';
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body.login-window-visible {
+    overflow: hidden;
+
+    .top-navigation-bar {
+      top: 0 !important;
+      position: fixed;
+      z-index: 999;
+    }
+
+    #header {
+      position: fixed;
+      z-index: 998;
+      top: 0;
+    }
+
+    .login-widget {
+      transition: opacity .3s ease-in-out;
+    }
+  }
+}
