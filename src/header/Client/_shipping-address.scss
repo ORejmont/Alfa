@@ -1,0 +1,21 @@
+@use "../Abstracts" as abs;
+
+.customer-page {
+  form[action="/action/Customer/updateShippingAddress/"] {
+    @include abs.background;
+    padding: 25px;
+    border-radius: 15px;
+
+    @media (max-width: 767px) {
+      padding: 15px;
+    }
+
+    label {
+      margin-bottom: 3px;
+    }
+
+    .btn {
+      margin-top: 5px;
+    }
+  }
+}

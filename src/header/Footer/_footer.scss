@@ -1,0 +1,658 @@
+@use "../Abstracts" as abs;
+
+#footer {
+  // @include abs.background;
+  background-color: #171717;
+  // display: none;
+  max-width: 100vw;
+  overflow: hidden;
+
+  color: #d3d3d3;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+
+  margin-top: abs.$large-gap;
+
+  @media (max-width: 991px) {
+    margin-top: abs.$mobile-gap + 10px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: abs.$mobile-gap;
+  }
+
+  .custom-footer__filters {
+    display: none;
+  }
+
+  li {
+    padding-left: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  a:not(.btn) {
+    color: #d3d3d3;
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  ul li,
+  #categories .categories,
+  .news-item-widget {
+    margin-bottom: 15px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .news-item-widget {
+    h5 {
+      margin: 0;
+    }
+
+    time {
+      font-size: 13px;
+    }
+  }
+
+  .custom-footer__categories {
+    // #cat-manufacturers {
+    //   display: none;
+    // }
+
+    .cat-trigger {
+      display: none;
+    }
+
+    .expandable {
+
+      >ul {
+        display: none;
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #d3d3d3;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .sr-only,
+  .no-display {
+    display: none;
+  }
+
+  .container {
+    position: relative;
+
+    @media (max-width: 767px) {
+      width: calc(100% - 32px);
+    }
+
+    .site-name {
+      display: none;
+    }
+
+    .custom-footer {
+      width: calc(100% + 20px);
+      margin: 0 -10px;
+
+      $footer-top-padding: 50px - 10px;
+
+      padding-top: $footer-top-padding;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: stretch;
+
+      >div:not(.custom-footer__instagram) {
+        width: calc(100% / 4 - 20px);
+        // background-color: abs.$color-body-background;
+        margin: 10px 10px 60px 10px;
+
+        @media (max-width: 1199px) {
+          width: calc(100% / 2 - 20px);
+        }
+
+        @media (max-width: 600px) {
+          width: calc(100% - 20px);
+          margin: 10px 10px 30px 10px;
+          text-align: center;
+        }
+      }
+
+      .custom-footer__instagram {
+        width: 100%;
+        order: -9;
+
+        margin-top: -$footer-top-padding;
+        margin-bottom: $footer-top-padding;
+
+        h4 {
+          display: none;
+        }
+
+        .instagram-widget {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: stretch;
+
+          padding: 50px 0;
+
+          position: relative;
+          z-index: 1;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100%;
+            background-color: abs.$color-black;
+            z-index: -1;
+          }
+
+          >a {
+            display: flex;
+            border-radius: abs.$border-radius;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+            flex: 1;
+
+            // width: calc(100% / 5 - 20px);
+            max-width: 25%;
+            margin: auto 10px;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
+              background-color: #000;
+              opacity: 0;
+              display: block;
+              z-index: 1;
+              transition-duration: .3s;
+            }
+
+            &::after {
+              content: '\f115';
+              font-family: alfa;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 50px;
+              color: #fff;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: 2;
+              transition: transform 0.3s ease-out;
+              transform: translate(-50%, -50%) scale(0);
+            }
+
+            &:hover {
+              &::before {
+                opacity: .3;
+              }
+
+              &::after {
+                transform: translate(-50%, -50%) scale(1);
+              }
+            }
+
+            &:nth-last-of-type(n+7) {
+              display: none;
+            }
+
+            @media (max-width: 1439px) {
+              &:nth-last-of-type(n+5) {
+                display: none;
+              }
+            }
+
+            @media (max-width: 1199px) {
+              &:nth-last-of-type(n+5) {
+                display: flex;
+              }
+
+              &:nth-last-of-type(n+9) {
+                display: none;
+              }
+
+              flex: initial;
+              width: calc(100% / 4 - 20px);
+              margin: 10px;
+              max-width: none;
+            }
+
+            @media (max-width: 600px) {
+              &:nth-last-of-type(n+7) {
+                display: none;
+              }
+
+              width: calc(100% / 3 - 20px);
+            }
+
+            @media (max-width: 479px) {
+              &:nth-last-of-type(n+5) {
+                display: none;
+              }
+
+              width: calc(100% / 2 - 20px);
+            }
+
+            img {
+              width: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+
+          .instagram-follow-btn {
+            flex: 0 0 380px;
+            margin: 0 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            order: -1;
+
+            @media (max-width: 1199px) {
+              flex: initial;
+              margin: 10px;
+              width: 100%;
+              margin-bottom: 10px + 20px;
+            }
+
+            a {
+              background-color: transparent;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-decoration: none;
+              border-radius: 150px;
+              color: #fff;
+              font-weight: 700;
+              line-height: 1.2;
+              font-size: 15px;
+              padding: 13.5px 35px;
+              text-align: left;
+              border: 2px solid #fff;
+
+              transition-duration: .3s;
+              position: relative;
+              z-index: 1;
+              overflow: hidden;
+
+              &::before {
+                content: '\f116';
+                font-family: alfa;
+                display: inline-block;
+                font-size: 15px;
+                margin-right: 5px;
+                font-weight: 400;
+                color: #fff;
+                transition: color .3s ease-in-out;
+              }
+
+              &:hover::before {
+                color: abs.$color-black;
+              }
+
+              &::after {
+                content: '';
+                height: 100%;
+                width: 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #fff;
+                border-radius: 150px;
+                z-index: -1;
+                transition-duration: .3s;
+                transition-timing-function: ease-out;
+              }
+
+              &:hover {
+                color: abs.$color-black;
+                background-color: #fff;
+                transition:
+                  color 0.3s ease,
+                  background-color 0.3s ease 0.3s;
+
+                &::after {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-links-icons {
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .footer-links,
+    .footer-icons {
+      width: calc(100% + 20px);
+      margin: -10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .footer-link,
+      .footer-icon {
+        margin: 10px;
+      }
+    }
+
+    .footer-links {
+
+      +.footer-icons {
+        margin-top: 30px - 10px;
+      }
+
+      .footer-link {
+        a {
+          text-decoration: underline;
+          text-align: center;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .footer-icons {
+      .footer-icon {
+        img {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+    line-height: 1.2;
+
+    .signature-rejmedia {
+      margin-top: 8px;
+      font-size: 13px;
+
+      a {
+        font-size: 13px;
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    #signature {
+      margin-top: 25px;
+      font-size: 13px;
+
+      a {
+        display: inline-block;
+        font-size: 13px;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .image {
+        position: relative;
+        bottom: -3px;
+
+        &:hover+.title {
+          text-decoration: underline;
+          color: #fff;
+        }
+
+        img {
+          margin-right: 10px;
+          border-radius: 0;
+          width: 16px;
+          height: 16px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+#footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  >span {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  &::before,
+  &::after {
+    display: block;
+    line-height: 1.1;
+  }
+
+  &::before {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+
+    @media (max-width: 479px) {
+      font-size: 32px;
+    }
+  }
+
+  &::after {
+    font-size: 30px;
+    font-weight: 700;
+    color: abs.$color-grey;
+
+    @media (max-width: 479px) {
+      font-size: 26px;
+    }
+  }
+}
+
+/* Footer Instagram follow button translations */
+html[lang="cs"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Zůstaňte v obraze';
+  }
+
+  &::after {
+    content: 'a nenechte si nic ujít';
+  }
+}
+
+html[lang="sk"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Zostaňte v obraze';
+  }
+
+  &::after {
+    content: 'a nenechajte si nič ujsť';
+  }
+}
+
+html[lang="pl"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Bądź na bieżąco';
+  }
+
+  &::after {
+    content: 'i nie przegap niczego';
+  }
+}
+
+html[lang="de"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Bleiben Sie auf dem Laufenden';
+  }
+
+  &::after {
+    content: 'und verpassen Sie nichts';
+  }
+}
+
+html[lang="en"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Stay in the loop';
+  }
+
+  &::after {
+    content: 'and don’t miss a thing';
+  }
+}
+
+html[lang="hu"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Maradjon naprakész';
+  }
+
+  &::after {
+    content: 'és ne maradjon le semmiről';
+  }
+}
+
+html[lang="ro"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Rămâi la curent';
+  }
+
+  &::after {
+    content: 'și nu rata nimic';
+  }
+}
+
+html[lang="si"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Ostanite obveščeni';
+  }
+
+  &::after {
+    content: 'in ne zamudite ničesar';
+  }
+}
+
+html[lang="hr"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Ostanite u toku';
+  }
+
+  &::after {
+    content: 'i ne propustite ništa';
+  }
+}
+
+html[lang="bg"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Бъдете в течение';
+  }
+
+  &::after {
+    content: 'и не пропускайте нищо';
+  }
+}
+
+html[lang="el"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Μείνετε ενημερωμένοι';
+  }
+
+  &::after {
+    content: 'και μην χάσετε τίποτα';
+  }
+}
+
+html[lang="it"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Resta aggiornato';
+  }
+
+  &::after {
+    content: 'e non perderti nulla';
+  }
+}
+
+html[lang="lt"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Likite informuoti';
+  }
+
+  &::after {
+    content: 'ir nepraleiskite nieko svarbaus';
+  }
+}
+
+html[lang="vi"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Hãy luôn cập nhật';
+  }
+
+  &::after {
+    content: 'và đừng bỏ lỡ điều gì';
+  }
+}
+
+html[lang="other"] #footer .container .custom-footer .custom-footer__instagram .instagram-widget .instagram-follow-btn {
+  &::before {
+    content: 'Stay informed';
+  }
+
+  &::after {
+    content: 'and don’t miss out';
+  }
+}
