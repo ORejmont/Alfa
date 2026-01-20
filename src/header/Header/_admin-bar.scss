@@ -1,0 +1,150 @@
+@use "../Abstracts" as abs;
+
+.admin-bar {
+  // position: fixed;
+  // bottom: 0;
+  // width: 100%;
+  // left: 0;
+
+  display: none; // Remove
+  height: 0;
+  width: 0;
+
+  li {
+    padding: 0;
+    margin-bottom: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (min-width: 992px) {
+    background-color: #484848;
+    border-color: #333;
+    color: #dbdbdb;
+
+    border-style: solid;
+    border-width: 0 0 1px;
+    display: block;
+    font-size: 11px;
+    height: 25px;
+    line-height: 24px;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+
+    ul li {
+      list-style: none;
+
+      a,
+      span {
+        display: block;
+        text-decoration: none;
+      }
+    }
+
+    .container {
+      >ul {
+        display: flex;
+        justify-content: space-between;
+
+        >li {
+          border-color: #636363;
+
+          border-style: solid;
+          border-width: 0 1px 0 0;
+          display: block;
+          position: relative;
+          text-align: center;
+          transition: all .3s ease-out;
+          white-space: nowrap;
+          width: 100%;
+
+          &:hover {
+            background-color: #636363;
+            color: #fff;
+
+            >a,
+            >span {
+              color: #fff;
+            }
+          }
+
+          &:hover,
+          &.hover {
+            >ul {
+              display: block;
+            }
+          }
+
+          >a,
+          >span {
+            color: #dbdbdb;
+
+            display: block;
+            text-decoration: none;
+
+            padding: 0 19px;
+          }
+
+          ul {
+            background-color: #f5fcfe;
+            border-color: #dbe0e2;
+
+            border-style: solid;
+            border-width: 1px;
+            display: none;
+            position: absolute;
+            right: 100%;
+            top: -1px;
+            width: 100%;
+            z-index: 4;
+
+            li {
+              position: relative;
+              text-align: left;
+
+              a,
+              span {
+                border-color: #d0effc;
+                color: #000;
+                border-style: solid;
+                border-width: 0 0 1px;
+                line-height: 16px;
+                padding: 4px 10px;
+                white-space: normal;
+
+                &:hover {
+                  background-color: #e1f4fa;
+                }
+              }
+            }
+          }
+
+          >ul {
+            border-top-color: #333;
+
+            right: 0;
+            top: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Admin bar dolů na stránku */
+@media (min-width: 992px) {
+  .admin-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+
+    .container>ul>li>ul {
+      top: 0px;
+      transform: translateY(-100%);
+    }
+  }
+}
