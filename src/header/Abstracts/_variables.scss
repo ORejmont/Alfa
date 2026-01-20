@@ -1,0 +1,69 @@
+/* Colors */
+$color-conversion: var(--color-secondary);
+$color-conversion-hover: var(--color-secondary-hover);
+
+$color-primary: var(--color-primary);
+$color-secondary: var(--color-primary-hover);
+$color-tertiary: var(--color-tertiary);
+$color-quaternary: var(--color-tertiary-hover);
+
+$color-header-background: var(--color-header-background);
+$color-black: #0f0f0f;
+$color-grey: #8d8d8d;
+$color-grey-light: #cacaca;
+$color-grey-dark: #7d7d7d;
+
+$color-body-background: #f3f5f8;
+
+$color-nav-element-background: #f5f6f8; // rgba($color: #000000, $alpha: .05);
+$color-nav-element-background-hover: #e9ebec; // rgba($color: #000000, $alpha: .05);
+
+$color-checkbox-background: #dddde1;
+$border-color: #f5f5f5;
+$color-remove: #f35050;
+$color-remove-hover: #bd2424;
+/* Colors */
+
+/* Page spacing */
+$page-side-padding: 80px;
+$page-side-padding-tablet: 40px;
+$page-side-padding-mobile: 12px;
+/* Page spacing */
+
+/* Gaps */
+$small-gap: 15px;
+$small-gap-12: 12px;
+$large-gap: 70px;
+$mobile-gap: 40px;
+/* Gaps */
+
+/* Border radius */
+$border-radius: 10px;
+/* Border radius */
+
+/* Shadows */
+$banners-text-shadow: rgba($color: #fff, $alpha: .4) 0 0 3px;
+$banners-text-shadow-dark: rgba($color: #000, $alpha: .25) 0 0 3px;
+$banners-text-shadow-dark-button: rgba($color: #000, $alpha: .03) 0 0 8px;
+
+$box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+/* Shadows */
+
+/* Fonts */
+$poppins: "Poppins", sans-serif;
+$roboto: "Roboto", sans-serif;
+/* Fonts */
+
+/* Backgrounds */
+@mixin background {
+  background-color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+@mixin popup_background {
+  background-color: #fff;
+  border: 2px solid $color-nav-element-background-hover;
+}
+
+/* Backgrounds */

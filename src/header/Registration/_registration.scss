@@ -1,0 +1,192 @@
+@use "../Abstracts" as abs;
+
+.co-box {
+  @include abs.background;
+  padding: 25px;
+  border-radius: abs.$border-radius;
+  margin-bottom: 10px;
+
+  @media (max-width: 767px) {
+    padding: 15px;
+  }
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+
+  .input-wrapper {
+    width: 100%;
+  }
+
+  &.smart-label-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+
+    // input {
+    //   width: 250px;
+    // }
+
+    // @media (max-width: 479px) {
+    //   input {
+    //     width: 100%;
+    //   }
+    // }
+  }
+}
+
+.form-group>select.form-control,
+.form-group>select,
+select {
+  width: 250px;
+
+  border-radius: 4px;
+  border: 1px solid #c4cad5;
+  padding: 10px 10px;
+  background-color: #fff;
+  color: abs.$color-black;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  padding-right: 35px;
+  border-radius: 20px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  position: relative;
+
+  background:
+    #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 13 8' fill='none'><path d='M11.2929 0.292893C11.6834 -0.0976311 12.3164 -0.0976311 12.707 0.292893C13.0975 0.683418 13.0975 1.31643 12.707 1.70696L6.49992 7.91399L0.292893 1.70696C-0.0976311 1.31643 -0.0976311 0.683418 0.292893 0.292893C0.683418 -0.0976311 1.31643 -0.0976311 1.70696 0.292893L6.49992 5.08586L11.2929 0.292893Z' fill='%23C4CAD5'/></svg>") no-repeat right 12px center;
+
+  background-size: 13px 8px;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  option {
+    cursor: pointer;
+  }
+
+  @media (max-width: 479px) {
+    width: 100%;
+  }
+}
+
+.form-group.smart-label-wrapper .phone-combined-input {
+  max-width: 250px;
+  width: 100%;
+
+  input {
+    width: 100%;
+  }
+
+  @media (max-width: 479px) {
+    max-width: none;
+  }
+}
+
+.country-flags {
+  cursor: pointer;
+  padding-right: 5px;
+  position: relative;
+  height: 41.39px;
+  display: flex;
+  align-items: center;
+}
+
+.country-flags:not(.active) .country-flag.selected {
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color .3s ease-in-out;
+
+  &:hover {
+    background-color: abs.$color-nav-element-background-hover;
+  }
+}
+
+.country-flags.active .country-flag.selected,
+.country-flag:not(.selected) {
+  padding: 5px 10px;
+  transition: background-color 0s ease-in-out;
+
+  &:hover {
+    background-color: abs.$color-nav-element-background-hover;
+  }
+}
+
+.country-flag,
+.phone-combined-input select,
+.shp-flag-name {
+  display: none;
+}
+
+.country-flags.active {
+  .shp-flag-name {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .shp-flag-label::after {
+    content: none;
+  }
+}
+
+.country-flag.selected,
+.country-flags.active .country-flag {
+  display: flex;
+}
+
+.js-phone-form-group {
+  display: flex;
+}
+
+.phone-combined-input {
+  display: flex;
+  align-items: center;
+}
+
+.shp-flag-label {
+  padding-left: 5px;
+  text-align: right;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: '\f113';
+    font-family: 'alfa';
+    display: inline-block;
+    font-size: 11px;
+    margin-left: 3px;
+  }
+}
+
+.country-flags.active .country-flags-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 360px;
+  width: 300px;
+  border: 1px solid abs.$color-nav-element-background-hover;
+  background-color: #fff;
+  border-radius: abs.$border-radius;
+  overflow-y: auto;
+  z-index: 9;
+}
+
+#register-form {
+  @include abs.background;
+  border-radius: abs.$border-radius;
+  padding: 25px;
+
+  .co-box {
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 25px;
+    border-radius: 0;
+    background-color: transparent;
+  }
+}
