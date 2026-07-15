@@ -1,0 +1,130 @@
+@use "../Abstracts" as abs;
+
+@media (min-width: 992px) {
+  .sidebar+#content {
+    .subcategories {
+      li {
+        width: calc(100% / 5 - 15px);
+
+        @media (max-width: 1439px) {
+          width: calc(100% / 4 - 15px);
+        }
+
+        @media (max-width: 1199px) {
+          width: calc(100% / 3 - 15px);
+        }
+      }
+    }
+  }
+}
+
+.subcategories {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -7.5px;
+  width: calc(100% + 15px);
+
+  margin-bottom: calc(-7.5px + 20px);
+
+  @media (max-width: 767px) {
+    margin: -6px;
+    width: calc(100% + 12px);
+
+    margin-bottom: calc(-6px + 20px);
+  }
+
+  &:not(.with-image) {
+    li a {
+      min-height: 60px;
+      justify-content: center;
+
+      .text {
+        margin-top: 0;
+        font-size: 17px;
+      }
+    }
+  }
+
+  li {
+    padding-left: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  li {
+    margin: 7.5px;
+
+    &:last-of-type {
+      margin-bottom: 7.5px;
+    }
+
+    @media (max-width: 1599px) {
+      width: calc(100% / 6 - 15px);
+    }
+
+    @media (max-width: 1439px) {
+      width: calc(100% / 5 - 15px);
+    }
+
+    @media (max-width: 1199px) {
+      width: calc(100% / 4 - 15px);
+    }
+
+    @media (max-width: 991px) {
+      width: calc(100% / 3 - 15px);
+    }
+
+    @media (max-width: 767px) {
+      width: calc(100% / 2 - 12px);
+      margin: 6px;
+    }
+
+    @media (min-width: 1600px) {
+      width: calc(100% / 7 - 15px);
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      height: 100%;
+      flex-direction: column;
+      text-decoration: none;
+      @include abs.background;
+      border-radius: abs.$border-radius;
+      border: 2px solid transparent;
+      transition-duration: .3s;
+
+      .image {
+        display: flex;
+
+        img {
+          border-radius: abs.$border-radius;
+          width: 120px;
+          height: auto;
+          aspect-ratio: 7/5;
+          object-fit: contain;
+        }
+      }
+
+      .text {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        color: #82848f;
+        transition-duration: .3s;
+      }
+
+      &:hover {
+        border-color: abs.$color-primary;
+
+        .text {
+          color: abs.$color-primary;
+        }
+      }
+    }
+  }
+}

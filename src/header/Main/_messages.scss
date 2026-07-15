@@ -1,0 +1,67 @@
+@use "../Abstracts" as abs;
+
+.messages {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99999;
+  max-width: calc(100% - 40px);
+  width: 100%;
+  pointer-events: none;
+
+  @media (max-width: 767px) {
+    bottom: abs.$page-side-padding-mobile;
+    left: abs.$page-side-padding-mobile;
+    max-width: calc(100% - abs.$page-side-padding-mobile * 2);
+  }
+
+  // .msg-error
+  .msg {
+    @include abs.background;
+    padding: 20px 30px;
+    border-radius: abs.$border-radius;
+    color: abs.$color-black;
+    line-height: 1.3;
+    font-size: 20px;
+    font-weight: 600;
+    max-width: 480px;
+    pointer-events: auto;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    &.msg-warning,
+    &.msg-error {
+      background-color: #ff3333;
+      color: #fff;
+    }
+
+    &.msg-success,
+    &.msg-info {
+      background-color: #1cb300;
+      color: #fff;
+    }
+
+    .container {
+      margin: 0;
+      max-width: none;
+      width: 100%;
+    }
+  }
+}

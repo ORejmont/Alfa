@@ -1,0 +1,71 @@
+@use "../Abstracts" as abs;
+
+.watchdog-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+
+  .disclaimer {
+    color: abs.$color-grey;
+    font-style: italic;
+    font-size: 15px;
+  }
+
+  input[type="checkbox"]+label {
+    margin-right: 7px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    margin-top: 5px;
+  }
+
+  .disclaimer {
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+#cboxContent .watchdog-row .form-control#priceUnder {
+  width: 110px;
+  margin-top: 0;
+
+  +span {
+    margin-left: 7px;
+
+    +.disclaimer {
+      width: 100%;
+      margin-top: 2px;
+    }
+  }
+}
+
+.watchdog-action-buttons {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+
+  .btn {
+    margin: 5px 2.5px 0 2.5px;
+    width: auto;
+
+    &#watchdog-submit {
+      background-color: abs.$color-conversion;
+
+      &:hover {
+        background-color: abs.$color-conversion-hover;
+      }
+    }
+  }
+}
+
+#watchdog-variants-select {
+  flex-direction: column;
+  align-items: flex-start;
+
+  label {
+    margin-bottom: 3px;
+  }
+}

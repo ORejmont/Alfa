@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "alfa";
+    src: url("./alfa.woff2?29c988fae11d55eed7dd7c9fbc53b5d4") format("woff2"),
+url("./alfa.woff?29c988fae11d55eed7dd7c9fbc53b5d4") format("woff");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: alfa !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-breadcrumbs-arrow:before {
+    content: "\f101";
+}
+.icon-breadcrumbs-home:before {
+    content: "\f102";
+}
+.icon-carousel-arrow-left:before {
+    content: "\f103";
+}
+.icon-carousel-arrow-right:before {
+    content: "\f104";
+}
+.icon-cart:before {
+    content: "\f105";
+}
+.icon-category:before {
+    content: "\f106";
+}
+.icon-close:before {
+    content: "\f107";
+}
+.icon-empty-star:before {
+    content: "\f108";
+}
+.icon-filter-outline:before {
+    content: "\f109";
+}
+.icon-full-star:before {
+    content: "\f10a";
+}
+.icon-half-star:before {
+    content: "\f10b";
+}
+.icon-hamburger:before {
+    content: "\f10c";
+}
+.icon-mail:before {
+    content: "\f10d";
+}
+.icon-nav-arrow-mobile:before {
+    content: "\f10e";
+}
+.icon-nav-arrow:before {
+    content: "\f10f";
+}
+.icon-phone:before {
+    content: "\f110";
+}
+.icon-search:before {
+    content: "\f111";
+}
+.icon-site-msg-arrow:before {
+    content: "\f112";
+}
+.icon-sorting-arrow:before {
+    content: "\f113";
+}
+.icon-user:before {
+    content: "\f114";
+}
+.icon-ig-heart:before {
+    content: "\f115";
+}
+.icon-instagram:before {
+    content: "\f116";
+}
+.icon-date:before {
+    content: "\f117";
+}
+.icon-van:before {
+    content: "\f118";
+}
+.icon-facebook:before {
+    content: "\f119";
+}
+.icon-twitter-x:before {
+    content: "\f11a";
+}
+.icon-instagram-2:before {
+    content: "\f11b";
+}
+.icon-messenger:before {
+    content: "\f11c";
+}
+.icon-whatsapp:before {
+    content: "\f11d";
+}
+.icon-youtube:before {
+    content: "\f11e";
+}
+.icon-tiktok:before {
+    content: "\f11f";
+}
+.icon-select-arrow:before {
+    content: "\f120";
+}
+.icon-trash:before {
+    content: "\f121";
+}
+.icon-delivery:before {
+    content: "\f122";
+}
+.icon-done:before {
+    content: "\f123";
+}
+.icon-cart-nav-arrow:before {
+    content: "\f124";
+}
+.icon-global:before {
+    content: "\f125";
+}
+.icon-payment:before {
+    content: "\f126";
+}
+.icon-gift:before {
+    content: "\f127";
+}
+.icon-chat:before {
+    content: "\f128";
+}
+.icon-share:before {
+    content: "\f129";
+}
+.icon-watchdog:before {
+    content: "\f12a";
+}
+.icon-personal:before {
+    content: "\f12b";
+}
+.icon-billing:before {
+    content: "\f12c";
+}

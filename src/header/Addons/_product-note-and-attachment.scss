@@ -1,0 +1,6 @@
+@use "../Abstracts" as abs;
+
+.dkLabNoteCartMessage {
+  margin-bottom: 10px;
+  border-radius: abs.$border-radius;
+}

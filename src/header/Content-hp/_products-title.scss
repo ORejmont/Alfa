@@ -1,0 +1,21 @@
+@use "../Abstracts" as abs;
+
+.homepage-group-title {
+  text-align: center;
+  font-size: 32px;
+  color: abs.$color-black;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-top: abs.$large-gap;
+  margin-bottom: abs.$small-gap;
+  font-family: abs.$poppins;
+
+  @media (max-width: 991px) {
+    margin-top: abs.$mobile-gap + 10px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 26px;
+    margin-top: abs.$mobile-gap;
+  }
+}
